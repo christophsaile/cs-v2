@@ -6,7 +6,11 @@ type Props = {
 
 class Statement extends React.Component<Props> {
   render() {
-    return <div className='statement'>{this.props.title}</div>;
+    return (
+      <section className='statement__container'>
+        <div className='statement__title'>{this.props.title}</div>
+      </section>
+    );
   }
 }
 

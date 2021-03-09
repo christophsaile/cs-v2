@@ -1,7 +1,16 @@
 .statement {
-  font-family: $font-family-windsor;
+  
+  &__container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+  }
 
-  @include breakpoint($xxl) {
-    font-size: 30rem;
+  &__title {
+    margin: auto;
+    font-family: $font-family-windsor;
+    @include breakpoint($xxl) {
+      font-size: 30rem;
+    }
   }
 }
