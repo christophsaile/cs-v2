@@ -3,7 +3,7 @@ import Statement from './components/statement/statement';
 
 class App extends React.Component {
   render() {
-    return <Statement />;
+    return <Statement title='Àpropos'/>;
   }
 }
 

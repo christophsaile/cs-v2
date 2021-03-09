@@ -1,9 +1,12 @@
 import React from 'react';
-import './statement.scss';
 
-class Statement extends React.Component {
+type Props = {
+  title: string;
+};
+
+class Statement extends React.Component<Props> {
   render() {
-    return <h1>Hello World</h1>;
+    return <div className='statement'>{this.props.title}</div>;
   }
 }
 
