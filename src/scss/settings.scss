@@ -8,6 +8,14 @@ $offwhite: #efefe6;
 $white: #ffffff;
 $black: #000000;
 
+// breakpoints
+$xs: 0;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+
 // fonts
 $font-family-windsor: 'windsor_btroman', serif;
 $font-family-markPro: 'mark_pro', sans-serif;
@@ -21,5 +29,5 @@ $body-font-family: $font-family-markPro;
 $body-font-weight: $font-weight-normal;
 $body-font-style: normal;
 $body-font-size: 1rem;
-$body-line-height: 25rem;
+$body-line-height: normal;
 $body-min-width: 30rem;

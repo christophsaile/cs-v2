@@ -1,5 +1,8 @@
 @charset "UTF-8";
 
+/* breakpoint */
+@import "~breakpoint-sass/stylesheets/breakpoint";
+
 /* settings */
 @import './settings.scss';
 
@@ -11,3 +14,6 @@
 
 /* global styles */
 @import './global.scss';
+
+/* components */
+@import '../components/statement/statement.scss'

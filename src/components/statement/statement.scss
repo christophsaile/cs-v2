@@ -1,0 +1,7 @@
+.statement {
+  font-family: $font-family-windsor;
+
+  @include breakpoint($xxl) {
+    font-size: 30rem;
+  }
+}
