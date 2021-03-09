@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  background-color: $body-bg-color;
+  color: $body-color;
+  font-family: $body-font-family;
+  font-weight: $body-font-weight;
+  font-style: $body-font-style;
+  font-size: $body-font-size;
+  line-height: $body-line-height;
+  min-width: $body-min-width;
+  min-height: 100vh;
+}
