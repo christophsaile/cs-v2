@@ -2,6 +2,7 @@ import React from 'react';
 import { ReactComponent as SayHeySvg } from '../../assets/imgs/say-hey.svg';
 import { ReactComponent as Smiley } from '../../assets/imgs/smiley.svg';
 import { ReactComponent as Cancel } from '../../assets/imgs/cancel.svg';
+import Button from '../button/button';
 
 type Props = {};
 
@@ -43,6 +44,12 @@ class SayHey extends React.Component<Props, State> {
             </div>
             <div className='sayHey__smiley'>
               <Smiley title='Email' />
+            </div>
+            <div className='sayHey__social'>
+              <Button title='Instagram' color='yellow' link='www.google.com'/>
+              <Button title='Facebook' color='purple' link='www.google.com'/>
+              <Button title='Github' color='red' link='www.google.com'/>
+              <Button title='+49 1578 2278711' color='lightblue' link='www.google.com'/>
             </div>
           </div>
         </section>

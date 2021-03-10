@@ -1,5 +1,4 @@
 .sayHey {
-
   &__icon {
     position: fixed;
     bottom: 0;
@@ -25,14 +24,17 @@
 
   &__content {
     display: flex;
+    flex-direction: column;
     position: relative;
+    height: 100%;
+    padding: 2rem;
   }
 
   &__cancel {
     position: absolute;
     right: 0;
     width: 3rem;
-    margin: 2rem 2rem 0 0;
+    margin: 0rem 2rem 0 0;
 
     svg {
       fill: $white;

@@ -1,0 +1,32 @@
+.button {
+  padding: 1rem 2rem;
+  background-color: $black;
+  border-radius: 2.7rem;
+  border-width: 0.2rem;
+
+  &--yellow {
+    border-color: $yellow;
+  }
+
+  &--red {
+    border-color: $red;
+  }
+
+  &--purple {
+    border-color: $purple;
+  }
+
+  &--lightblue {
+    border-color: $lightblue;
+  }
+
+  &--brown {
+    border-color: $brown;
+  }
+
+  a {
+    font-size: 2.6rem;
+    text-decoration: none;
+    color: $white;
+  }
+}
