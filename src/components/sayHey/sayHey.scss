@@ -1,0 +1,50 @@
+.sayHey {
+
+  &__icon {
+    position: fixed;
+    bottom: 0;
+    margin: 0 0 4rem 4rem;
+    width: 10rem;
+  }
+
+  &__contact {
+    display: none;
+
+    &--open {
+      display: block;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 45vh;
+      border-top-left-radius: 2rem;
+      border-top-right-radius: 2rem;
+      background-color: $black;
+    }
+  }
+
+  &__content {
+    display: flex;
+    position: relative;
+  }
+
+  &__cancel {
+    position: absolute;
+    right: 0;
+    width: 3rem;
+    margin: 2rem 2rem 0 0;
+
+    svg {
+      fill: $white;
+    }
+  }
+
+  &__smiley {
+    width: 20rem;
+    margin: auto;
+
+    svg {
+      fill: $white;
+    }
+  }
+}
