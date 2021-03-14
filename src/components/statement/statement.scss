@@ -9,7 +9,7 @@
   &__title {
     margin: auto;
     font-family: $font-family-windsor;
-    @include breakpoint($xxl) {
+    @include breakpoint($md) {
       font-size: 30rem;
     }
   }

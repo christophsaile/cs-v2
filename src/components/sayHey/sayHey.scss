@@ -2,9 +2,20 @@
   &__icon {
     position: fixed;
     bottom: 0;
+    width: 12rem;
+    height: 12rem;
     margin: 0 0 4rem 4rem;
-    width: 10rem;
+    border-width: 1px;
+    border-radius: 9999px;
+    border-color: transparent;
+    border-style: solid;
     cursor: pointer;
+    transition: border-color 0.2s ease-out 0s;
+    z-index: $z-sayHey;
+
+    &:hover {
+      border-color: $black;
+    }
   }
 
   &__contact {
