@@ -1,0 +1,42 @@
+.timelineItem {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 45rem;
+  height: 50rem;
+  margin-right: 25rem;
+  padding: 4rem;
+  background-color: $offwhite;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  h3 {
+    padding-bottom: 7rem;
+  }
+
+  &__title {
+    font-weight: bold;
+    padding-bottom: 2rem;
+  }
+
+  &__number {
+    position: absolute;
+    bottom: 0;
+    left: -5rem;
+    display: flex;
+    width: 10rem;
+    height: 10rem;
+    margin: 2.5rem;
+    border-radius: 100%;
+    font-size: $font-lg;
+    font-family: $font-family-windsor;
+    background-color: $black;
+    color: $white;
+
+    span {
+      margin: auto;
+    }
+  }
+}

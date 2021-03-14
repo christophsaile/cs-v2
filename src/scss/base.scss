@@ -20,3 +20,24 @@ body {
   min-width: $body-min-width;
   min-height: 100vh;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: $font-family-windsor;
+}
+
+h3 {
+  font-size: $font-lg;
+}
+
+p {
+  font-size: $font-md;
+  white-space: normal;
+}
+
+a {
+  font-size: $font-md;
+}

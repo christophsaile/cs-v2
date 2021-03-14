@@ -8,7 +8,7 @@ class Statement extends React.Component<Props> {
   render() {
     return (
       <section className='statement__container'>
-        <div className='statement__title'>{this.props.title}</div>
+        <h2 className='statement__title'>{this.props.title}</h2>
       </section>
     );
   }

@@ -1,0 +1,22 @@
+@import './timeline-item/timeline-item.scss';
+
+.timeline {
+  display: flex;
+  position: relative;
+  align-items: center;
+  height: 100%;
+  padding: 0 15rem;
+
+  &__stroke {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 0.4rem;
+    background-color: $black;
+    z-index: -1;
+  }
+
+  &__content {
+    display: flex;
+  }
+}
