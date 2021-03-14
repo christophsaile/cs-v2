@@ -27,8 +27,9 @@
   &__content {
     display: flex;
     flex-direction: column;
-    position: relative;
     height: 100%;
+    max-width: $xl;
+    margin: auto;
     padding: 2rem;
   }
 
@@ -45,11 +46,21 @@
   }
 
   &__smiley {
-    width: 20rem;
-    margin: auto;
+    height: 80%;
+    margin: 0 auto;
 
     svg {
       fill: $white;
+      height: 100%;
+    }
+  }
+
+  &__social {
+    display: flex;
+    margin-top: auto;
+
+    .button:last-child {
+      margin-left: auto;
     }
   }
 }

@@ -1,5 +1,8 @@
 @charset "UTF-8";
 
+/* normalize */
+@import-normalize;
+
 /* breakpoint */
 @import "~breakpoint-sass/stylesheets/breakpoint";
 

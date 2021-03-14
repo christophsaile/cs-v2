@@ -3,6 +3,8 @@
   background-color: $black;
   border-radius: 2.7rem;
   border-width: 0.2rem;
+  border-style: solid;
+  cursor: pointer;
 
   &--yellow {
     border-color: $yellow;
@@ -28,5 +30,9 @@
     font-size: 2.6rem;
     text-decoration: none;
     color: $white;
+  }
+
+  + .button {
+    margin-left: 2rem;
   }
 }
