@@ -8,10 +8,11 @@ import ChrisCam from './assets/imgs/chris-cam.png';
 
 class App extends React.Component {
   componentDidMount() {
+    // eslint-disable-next-line
     const scroll = new LocomotiveScroll({
       el: document.querySelector('[data-scroll-container]'),
       smooth: true,
-      direction: 'horizontal'
+      direction: 'horizontal',
     });
   }
 
