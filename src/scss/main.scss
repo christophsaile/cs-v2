@@ -4,10 +4,10 @@
 @import-normalize;
 
 /* breakpoint */
-@import "~breakpoint-sass/stylesheets/breakpoint";
+@import '~breakpoint-sass/stylesheets/breakpoint';
 
 /* locomotive-scroll */
-@import "~locomotive-scroll/src/locomotive-scroll";
+@import '~locomotive-scroll/src/locomotive-scroll';
 
 /* settings */
 @import './settings.scss';
@@ -26,4 +26,5 @@
 @import '../components/say-hey/say-hey.scss';
 @import '../components/button/button.scss';
 @import '../components/timeline/timeline.scss';
-@import '../components//about/about.scss';
+@import '../components/about/about.scss';
+@import '../components/work/work.scss';

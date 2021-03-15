@@ -1,0 +1,11 @@
+@import './work-item/work-item.scss';
+
+.work {
+  display: flex;
+  height: 100%;
+
+  &__content {
+    display: flex;
+    margin: auto;
+  }
+}

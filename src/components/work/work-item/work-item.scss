@@ -1,27 +1,24 @@
-.timelineItem {
-  display: flex;
-  flex-direction: column;
+.workItem {
   position: relative;
-  width: 45rem;
-  height: 50rem;
-  margin-right: 25rem;
+  width: 55rem;
+  height: 60rem;
   padding: 4rem;
+  margin-right: 50rem;
   background-color: $white;
-
-  &:last-child {
-    margin-right: 0;
-  }
 
   h3 {
     padding-bottom: 7rem;
   }
 
-  &__title {
-    font-weight: bold;
-    padding-bottom: 2rem;
+  img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 93%;
+    max-height: 55rem;
   }
 
-  &__number {
+  &__explore {
     position: absolute;
     bottom: -2.5rem;
     left: -2.5rem;
@@ -33,9 +30,12 @@
     font-family: $font-family-windsor;
     background-color: $black;
     color: $white;
+    cursor: pointer;
 
-    span {
+    a {
       margin: auto;
+      color: $white;
+      text-decoration: none;
     }
   }
 }

@@ -1,12 +1,19 @@
 .page {
-  height: 100vh;
+  width: auto;
 
   &--fullscreen {
     width: 100vw;
   }
 }
 
+.content {
+  display: flex;
+  height: 100%;
+}
+
 .intro {
+  position: relative;
+
   &__img {
     position: absolute;
     top: 0;
