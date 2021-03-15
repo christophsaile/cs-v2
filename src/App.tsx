@@ -4,6 +4,7 @@ import LocomotiveScroll from 'locomotive-scroll';
 // Components
 import Statement from './components/statement/statement';
 import Timeline from './components/timeline/timeline';
+import About from './components/about/about';
 
 // Content
 import TimelineContent from './components/timeline/timeline.json';
@@ -32,6 +33,9 @@ class App extends React.Component {
         </section>
         <section className='page--fullscreen' data-scroll-section >
           <Statement data-scroll title='Àpropos' />
+        </section>
+        <section className='page' data-scroll-section>
+          <About />
         </section>
         <section className='page' data-scroll-section >
           <Timeline data={TimelineContent}/>

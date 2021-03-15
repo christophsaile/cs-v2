@@ -1,0 +1,28 @@
+.about {
+  display: flex;
+  width: 65rem;
+  height: 100%;
+
+  &__content {
+    position: relative;
+    margin: auto;
+    padding-top: 7rem;
+  }
+
+  &__stroke {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 0.4rem;
+    background-color: $black;
+  }
+
+  h3 {
+    padding-bottom: 7rem;
+  }
+
+  p:first-of-type {
+    padding-bottom: 2rem;
+  }
+}
