@@ -1,12 +1,20 @@
 .about {
   display: flex;
-  width: 65rem;
+  width: 55rem;
   height: 100%;
+
+  @include breakpoint($lg) {
+    width: 65rem;
+  }
 
   &__content {
     position: relative;
     margin: auto;
-    padding-top: 7rem;
+    padding-top: $spacing-lg;
+
+    @include breakpoint($lg) {
+      padding-top: $spacing-xl;
+    }
   }
 
   &__stroke {
@@ -16,10 +24,6 @@
     right: 0;
     height: 0.4rem;
     background-color: $black;
-  }
-
-  h3 {
-    padding-bottom: 7rem;
   }
 
   p:first-of-type {

@@ -4,7 +4,7 @@
     bottom: 0;
     width: 12rem;
     height: 12rem;
-    margin: 0 0 4rem 4rem;
+    margin: 0 0 $spacing-lg $spacing-lg;
     border-width: 1px;
     border-radius: 100%;
     border-color: transparent;
@@ -19,18 +19,18 @@
   }
 
   &__contact {
-    display: none;
+    display: flex;
+    position: fixed;
+    height: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: all 0.3s linear ;
 
     &--open {
-      display: block;
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 45vh;
-      border-top-left-radius: 2rem;
-      border-top-right-radius: 2rem;
-      background-color: $black;
+      display: flex;
+      height: 100%;
+      background-color: rgba($color: $black, $alpha: 0.9);
       z-index: $z-contact;
     }
   }
@@ -38,17 +38,19 @@
   &__content {
     display: flex;
     flex-direction: column;
-    height: 100%;
+    width: 100%;
     max-width: $xl;
-    margin: auto;
-    padding: 2rem;
+    height: 50%;
+    margin: auto auto 0 auto;
+    padding-bottom: $spacing-lg;
   }
 
   &__cancel {
     position: absolute;
+    top: 0;
     right: 0;
     width: 3rem;
-    margin: 0rem 2rem 0 0;
+    margin: $spacing-lg $spacing-lg 0 0;
     cursor: pointer;
 
     svg {

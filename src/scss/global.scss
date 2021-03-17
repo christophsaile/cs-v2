@@ -1,5 +1,6 @@
 .page {
   width: auto;
+  margin-right: $spacing-xxl;
 
   &--fullscreen {
     width: 100vw;
@@ -22,5 +23,6 @@
     left: 0;
     margin: auto;
     height: calc(100% - 8rem);
+    max-height: 1000px;
   }
 }

@@ -9,11 +9,11 @@ $white: #ffffff;
 $black: #000000;
 
 // breakpoints
-$sm: 32rem;
-$md: 76.8rem;
-$lg: 102.4rem;
-$xl: 144rem;
-$xxl: 192rem;
+$sm: 320px;
+$md: 768px;
+$lg: 1024px;
+$xl: 1440px;
+$xxl: 1920px;
 
 // z-index
 $z-sayHey: 5;
@@ -28,7 +28,14 @@ $font-weight-normal: 400;
 // font-sizes
 $font-sm: 2rem;
 $font-md: 2.6rem;
-$font-lg: 5.2rem;
+$font-lg: 4.6rem;
+$font-xl: 5.2rem;
+
+// spacing
+$spacing-sm: 2rem;
+$spacing-lg: 4rem;
+$spacing-xl: 7rem;
+$spacing-xxl: 20vw;
 
 // body styles
 $body-color: $black;

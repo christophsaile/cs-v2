@@ -27,13 +27,13 @@ class App extends React.Component {
   render() {
     return (
       <main data-scroll-container>
-        <section  className='content'>
-        <SayHey />
-          <section className='page--fullscreen intro' data-scroll-section>
+        <section className='content'>
+          <SayHey />
+          <section className='page page--fullscreen intro' data-scroll-section>
             <Statement>Hey You</Statement>
             <img className='intro__img' src={ChrisCam} alt='Portrait Christoph Saile' />
           </section>
-          <section className='page--fullscreen' data-scroll-section>
+          <section className='page' data-scroll-section>
             <Statement>Àpropos</Statement>
           </section>
           <section className='page' data-scroll-section>
@@ -42,25 +42,21 @@ class App extends React.Component {
           <section className='page' data-scroll-section>
             <Timeline data={TimelineContent} />
           </section>
-          <section className='page--fullscreen' data-scroll-section>
+          <section className='page' data-scroll-section>
             <Statement outline={true}>
               Scroll
               <br />
               Further
             </Statement>
           </section>
-          <section className='page--fullscreen' data-scroll-section>
+          <section className='page' data-scroll-section>
             <Statement>Créations</Statement>
           </section>
           <section className='page' data-scroll-section>
             <Work />
           </section>
-          <section className='page--fullscreen' data-scroll-section>
-            <Statement>
-              Thanks for
-              <br />
-              scrolling
-            </Statement>
+          <section className='page page--fullscreen' data-scroll-section>
+            <Statement>Thanks!</Statement>
           </section>
         </section>
       </main>

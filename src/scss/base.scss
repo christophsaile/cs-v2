@@ -32,13 +32,30 @@ h5 {
 
 h3 {
   font-size: $font-lg;
+  white-space: normal;
+  padding-bottom: $spacing-lg;
+
+
+  @include breakpoint($lg) {
+    font-size: $font-xl;
+    padding-bottom: $spacing-xl;
+  }
 }
 
 p {
-  font-size: $font-md;
+  font-size: $font-sm;
   white-space: normal;
+
+  @include breakpoint($lg) {
+    font-size: $font-md;
+  }
 }
 
 a {
-  font-size: $font-md;
+  font-size: $font-sm;
+  white-space: normal;
+
+  @include breakpoint($lg) {
+    font-size: $font-md;
+  }
 }

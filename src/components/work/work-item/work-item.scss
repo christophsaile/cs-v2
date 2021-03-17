@@ -1,13 +1,17 @@
 .workItem {
   position: relative;
-  width: 55rem;
-  height: 60rem;
-  padding: 4rem;
+  width: 40rem;
+  padding: $spacing-sm $spacing-sm 4rem;
   margin-right: 50rem;
   background-color: $white;
 
-  h3 {
-    padding-bottom: 7rem;
+  @include breakpoint($lg) {
+    width: 45rem;
+    padding: $spacing-lg $spacing-lg 8rem;
+  }
+
+  &:last-child {
+    margin-right: 35rem;
   }
 
   img {
@@ -15,22 +19,29 @@
     top: 0;
     bottom: 0;
     left: 93%;
-    max-height: 55rem;
+    max-height: 90%;
+    margin: auto
   }
 
   &__explore {
     position: absolute;
-    bottom: -2.5rem;
-    left: -2.5rem;
+    bottom: -4.5rem;
+    left: -5.5rem;
     display: flex;
-    width: 10rem;
-    height: 10rem;
+    width: 9rem;
+    height: 9rem;
     border-radius: 100%;
     font-size: $font-lg;
     font-family: $font-family-windsor;
     background-color: $black;
     color: $white;
     cursor: pointer;
+
+    @include breakpoint($lg) {
+      width: 12rem;
+      height: 12rem;
+      font-size: $font-xl;
+    }
 
     a {
       margin: auto;
