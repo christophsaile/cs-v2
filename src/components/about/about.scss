@@ -1,7 +1,10 @@
 .about {
   display: flex;
-  width: 55rem;
-  height: 100%;
+
+  @include breakpoint($md) {
+    width: 55rem;
+    height: 100%;
+  }
 
   @include breakpoint($lg) {
     width: 65rem;

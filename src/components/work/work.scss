@@ -6,6 +6,11 @@
 
   &__content {
     display: flex;
+    flex-direction: column;
     margin: auto;
+
+    @include breakpoint($md) {
+      flex-direction: row;
+    }
   }
 }

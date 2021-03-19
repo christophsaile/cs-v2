@@ -2,21 +2,40 @@
 
 .timeline {
   display: flex;
+  flex-direction: column;
   position: relative;
   align-items: center;
-  height: 100%;
-  padding: 0 15rem;
+  padding: 5rem 0;
+
+  @include breakpoint($md) {
+    flex-direction: row;
+    height: 100%;
+    padding: 0 15rem;
+  }
 
   &__stroke {
     position: absolute;
-    left: 0;
-    right: 0;
-    height: 0.4rem;
+    top: 0;
+    bottom: 0;
+    width: 0.4rem;
     background-color: $black;
     z-index: -1;
+
+    @include breakpoint($md) {
+      top: auto;
+      left: 0;
+      bottom: auto;
+      right: 0;
+      height: 0.4rem;
+    }
   }
 
   &__content {
     display: flex;
+    flex-direction: column;
+
+    @include breakpoint($md) {
+      flex-direction: row;
+    }
   }
 }

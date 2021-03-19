@@ -1,9 +1,14 @@
 .workItem {
   position: relative;
-  width: 40rem;
-  padding: $spacing-sm $spacing-sm 4rem;
-  margin-right: 50rem;
+  width: 100%;
+  padding: $spacing-sm;
   background-color: $white;
+
+  @include breakpoint($md) {
+    width: 40rem;
+    padding: $spacing-sm $spacing-sm 4rem;
+    margin-right: 50rem;
+  }
 
   @include breakpoint($lg) {
     width: 45rem;
@@ -20,7 +25,7 @@
     bottom: 0;
     left: 93%;
     max-height: 90%;
-    margin: auto
+    margin: auto;
   }
 
   &__explore {
