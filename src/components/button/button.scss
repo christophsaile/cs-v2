@@ -1,5 +1,7 @@
 .button {
-  padding: 1rem 2rem;
+  width: 100%;
+  margin-bottom: $spacing-sm;
+  padding: $spacing-xs $spacing-sm;
   background-color: $black;
   border-radius: 2.7rem;
   border-width: 0.2rem;
@@ -31,7 +33,11 @@
     color: $white;
   }
 
-  + .button {
-    margin-left: 2rem;
+  @include breakpoint($md) {
+    width: auto;
+
+    + .button {
+      margin-left: 2rem;
+    }
   }
 }

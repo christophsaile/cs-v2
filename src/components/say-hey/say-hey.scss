@@ -2,9 +2,9 @@
   &__icon {
     position: fixed;
     bottom: 0;
-    width: 12rem;
-    height: 12rem;
-    margin: 0 0 $spacing-lg $spacing-lg;
+    width: 8rem;
+    height: 8rem;
+    margin: 0 0 $spacing-sm $spacing-sm;
     border-width: 1px;
     border-radius: 100%;
     border-color: transparent;
@@ -16,6 +16,12 @@
     &:hover {
       border-color: $black;
     }
+
+    @include breakpoint($md) {
+      width: 12rem;
+      height: 12rem;
+      margin: 0 0 $spacing-lg $spacing-lg;
+    }
   }
 
   &__contact {
@@ -25,7 +31,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    transition: all 0.3s linear ;
+    transition: all 0.3s linear;
 
     &--open {
       display: flex;
@@ -40,9 +46,14 @@
     flex-direction: column;
     width: 100%;
     max-width: $xl;
-    height: 50%;
     margin: auto auto 0 auto;
-    padding-bottom: $spacing-lg;
+    padding: $spacing-sm;
+
+    @include breakpoint($md) {
+      height: 50%;
+      padding: $spacing-lg;
+      padding-bottom: $spacing-lg;
+    }
   }
 
   &__cancel {
@@ -59,21 +70,35 @@
   }
 
   &__smiley {
-    height: 80%;
-    margin: 0 auto;
+    width: 100%;
+    margin: $spacing-sm auto;
+
+    @include breakpoint($md) {
+      width: auto;
+      height: 80%;
+      margin: 0 auto;
+    }
 
     svg {
       fill: $white;
-      height: 100%;
+
+      @include breakpoint($md) {
+        height: 100%;
+      }
     }
   }
 
   &__social {
     display: flex;
+    flex-direction: column;
     margin-top: auto;
 
-    .button:last-child {
-      margin-left: auto;
+    @include breakpoint($md) {
+      flex-direction: row;
+
+      .button:last-child {
+        margin-left: auto;
+      }
     }
   }
 }

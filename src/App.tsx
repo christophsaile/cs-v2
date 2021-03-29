@@ -14,13 +14,36 @@ import TimelineContent from './components/timeline/timeline-data.json';
 import SayHey from './components/say-hey/say-hey';
 import ChrisCam from './assets/imgs/chris-cam.png';
 
-class App extends React.Component {
+type Props = {};
+type State = {
+  isMobile: boolean;
+};
+class App extends React.Component<Props, State> {
+  constructor(props: Props) {
+    super(props);
+
+    this.state = {
+      isMobile: this.checkScreenSize(),
+    };
+  }
+
+  private checkScreenSize = (): boolean => {
+    console.log('checkSize');
+    return window.innerWidth > 768 ? false : true;
+  };
+
+  private handleResize = (): void => {
+    this.checkScreenSize() ? this.setState({ isMobile: true }) : this.setState({ isMobile: false });
+  };
+
   componentDidMount() {
+    window.addEventListener('resize', this.handleResize);
+
     // eslint-disable-next-line
     const scroll = new LocomotiveScroll({
       el: document.querySelector('[data-scroll-container]'),
       smooth: true,
-      direction: 'horizontal',
+      //direction: 'horizontal',
     });
   }
 
@@ -30,7 +53,7 @@ class App extends React.Component {
         <section className='content'>
           <SayHey />
           <section className='page page--fullscreen intro' data-scroll-section>
-            <Statement>Hey You</Statement>
+            <Statement center={true}>Hey You</Statement>
             <img className='intro__img' src={ChrisCam} alt='Portrait Christoph Saile' />
           </section>
           <section className='page' data-scroll-section>
@@ -56,7 +79,7 @@ class App extends React.Component {
             <Work />
           </section>
           <section className='page page--fullscreen' data-scroll-section>
-            <Statement>Thanks!</Statement>
+            <Statement center={true}>Thanks!</Statement>
           </section>
         </section>
       </main>

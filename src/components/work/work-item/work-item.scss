@@ -1,13 +1,29 @@
 .workItem {
   position: relative;
   width: 100%;
+  margin-top: 35rem;
   padding: $spacing-sm;
+  padding-top: 14rem;
+  padding-bottom: $spacing-xl;
   background-color: $white;
+
+  &:first-child {
+    margin-top: 25rem;
+  }
 
   @include breakpoint($md) {
     width: 40rem;
-    padding: $spacing-sm $spacing-sm 4rem;
     margin-right: 50rem;
+    margin-top: 0;
+    padding: $spacing-sm $spacing-sm 4rem;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-right: 35rem;
+    }
   }
 
   @include breakpoint($lg) {
@@ -15,32 +31,42 @@
     padding: $spacing-lg $spacing-lg 8rem;
   }
 
-  &:last-child {
-    margin-right: 35rem;
-  }
-
   img {
     position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 93%;
-    max-height: 90%;
+    bottom: 80%;
+    left: 0;
+    right: 0;
+    height: 35rem;
     margin: auto;
+
+    @include breakpoint($md) {
+      height: auto;
+      max-height: 90%;
+      top: 0;
+      bottom: 0;
+      left: 93%;
+    }
   }
 
   &__explore {
     position: absolute;
     bottom: -4.5rem;
-    left: -5.5rem;
+    left: 0;
+    right: 0;
     display: flex;
     width: 9rem;
     height: 9rem;
+    margin: auto;
     border-radius: 100%;
     font-size: $font-lg;
     font-family: $font-family-windsor;
     background-color: $black;
     color: $white;
     cursor: pointer;
+
+    @include breakpoint($md) {
+      left: -5.5rem;
+    }
 
     @include breakpoint($lg) {
       width: 12rem;

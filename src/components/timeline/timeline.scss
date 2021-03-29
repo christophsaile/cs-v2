@@ -5,7 +5,7 @@
   flex-direction: column;
   position: relative;
   align-items: center;
-  padding: 5rem 0;
+  padding: 5rem 0 7.5rem;
 
   @include breakpoint($md) {
     flex-direction: row;

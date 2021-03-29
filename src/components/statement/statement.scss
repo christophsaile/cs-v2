@@ -5,10 +5,11 @@
   }
 
   &__title {
-    margin: auto;
-    font-size: 7.5rem;
+    font-size: 6.5rem;
+    margin: auto 0;
 
     @include breakpoint($md) {
+      margin: auto;
       white-space: nowrap;
       font-size: 15rem;
     }
@@ -23,6 +24,10 @@
 
     @include breakpoint($xxl) {
       font-size: 30rem;
+    }
+
+    &--center {
+      margin: auto;
     }
   }
 }
