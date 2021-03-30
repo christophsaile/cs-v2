@@ -48,7 +48,7 @@ class App extends React.Component<Props, State> {
     const scroll = new LocomotiveScroll({
       el: document.querySelector('[data-scroll-container]'),
       smooth: true,
-      //direction: 'horizontal',
+      direction: this.state.isMobile ? 'vertical' : 'horizontal',
     });
   }
 
