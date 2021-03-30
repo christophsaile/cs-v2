@@ -15,7 +15,6 @@ import TimelineContent from './components/timeline/timeline-data.json';
 // Assets
 import SayHey from './components/say-hey/say-hey';
 import ChrisCam from './assets/imgs/chris-cam.png';
-import Background from './assets/imgs/background.png';
 
 type Props = {};
 type State = {

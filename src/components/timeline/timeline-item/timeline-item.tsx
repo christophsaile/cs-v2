@@ -15,7 +15,7 @@ class TimelineItem extends React.Component<Props> {
         <p className='timelineItem__title'>{this.props.title}</p>
         <p className='timelineItem__info'>{this.props.info}</p>
         <div className='timelineItem__number'>
-          <span data-scroll data-scroll-speed='2'>
+          <span data-scroll data-scroll-speed='1'>
             {this.props.id}
           </span>
         </div>
