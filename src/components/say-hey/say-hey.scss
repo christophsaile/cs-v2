@@ -50,7 +50,6 @@
     padding: $spacing-sm;
 
     @include breakpoint($md) {
-      height: 50%;
       padding: $spacing-lg;
       padding-bottom: $spacing-lg;
     }
@@ -71,12 +70,14 @@
 
   &__smiley {
     width: 100%;
-    margin: $spacing-sm auto;
+    margin: auto;
+    padding-bottom: $spacing-sm;
 
     @include breakpoint($md) {
       width: auto;
-      height: 80%;
+      height: 70vh;
       margin: 0 auto;
+      padding-bottom: $spacing-lg;
     }
 
     svg {

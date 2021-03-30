@@ -33,9 +33,11 @@
 
   .statement__container {
     .statement__title {
-      margin: 0 auto;
-      white-space: normal;
-      font-size: 15rem;
+      @include breakpoint($max-md) {
+        margin: 0 auto;
+        white-space: normal;
+        font-size: 15rem;
+      }
     }
   }
 

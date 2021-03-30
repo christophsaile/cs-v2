@@ -6,6 +6,7 @@
   padding: $spacing-xs;
   padding-bottom: 6rem;
   background-color: $white;
+  box-shadow: $boxshadow;
 
   @include breakpoint($md) {
     width: 35rem;
