@@ -8,7 +8,7 @@ type Props = {
 class Statement extends React.Component<Props> {
   render() {
     return (
-      <section className='statement__container'>
+      <section className='statement__container' data-scroll data-scroll-speed='1'>
         <h2
           className={
             this.props.center ? 'statement__title statement__title--center' : 'statement__title'

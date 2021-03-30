@@ -9,7 +9,7 @@ type Props = {
 class WorkItem extends React.Component<Props> {
   render() {
     return (
-      <div className='workItem'>
+      <div className='workItem animationItem' data-scroll data-scroll-speed='1'>
         <h3>{this.props.title}</h3>
         <p>{this.props.children}</p>
         <img src={this.props.img} alt={this.props.title} />

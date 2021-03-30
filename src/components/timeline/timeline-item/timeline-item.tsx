@@ -10,12 +10,14 @@ type Props = {
 class TimelineItem extends React.Component<Props> {
   render() {
     return (
-      <section className='timelineItem'>
+      <section className='timelineItem animationItem' data-scroll data-scroll-speed='1'>
         <h3>{this.props.year}</h3>
         <p className='timelineItem__title'>{this.props.title}</p>
         <p className='timelineItem__info'>{this.props.info}</p>
         <div className='timelineItem__number'>
-          <span>{this.props.id}</span>
+          <span data-scroll data-scroll-speed='2'>
+            {this.props.id}
+          </span>
         </div>
       </section>
     );

@@ -3,7 +3,7 @@ import React from 'react';
 class About extends React.Component {
   render() {
     return (
-      <article className='about'>
+      <article className='about' data-scroll data-scroll-speed='1'>
         <div className='about__content'>
           <span className='about__stroke'></span>
           <h3>Hello,</h3>

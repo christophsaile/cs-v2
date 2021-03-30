@@ -67,6 +67,7 @@
 
     @include breakpoint($md) {
       left: -5.5rem;
+      right: auto;
     }
 
     @include breakpoint($lg) {
