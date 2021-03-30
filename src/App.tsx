@@ -1,5 +1,6 @@
 import React from 'react';
 import LocomotiveScroll from 'locomotive-scroll';
+import { debounce } from './helpers/debounce';
 
 // Components
 import Statement from './components/statement/statement';
@@ -28,7 +29,6 @@ class App extends React.Component<Props, State> {
   }
 
   private checkScreenSize = (): boolean => {
-    console.log('checkSize');
     return window.innerWidth > 768 ? false : true;
   };
 
@@ -37,7 +37,12 @@ class App extends React.Component<Props, State> {
   };
 
   componentDidMount() {
-    window.addEventListener('resize', this.handleResize);
+    window.addEventListener(
+      'resize',
+      debounce(() => {
+        this.handleResize();
+      }, 250)
+    );
 
     // eslint-disable-next-line
     const scroll = new LocomotiveScroll({
@@ -53,7 +58,7 @@ class App extends React.Component<Props, State> {
         <section className='content'>
           <SayHey />
           <section className='page page--fullscreen intro' data-scroll-section>
-            <Statement center={true}>Hey You</Statement>
+            <Statement center={true}>Hey{this.state.isMobile && <br />} You</Statement>
             <img className='intro__img' src={ChrisCam} alt='Portrait Christoph Saile' />
           </section>
           <section className='page' data-scroll-section>
