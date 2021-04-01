@@ -33,8 +33,7 @@ h5 {
 h3 {
   font-size: $font-lg;
   white-space: normal;
-  padding-bottom: $spacing-lg;
-
+  padding-bottom: $spacing-md;
 
   @include breakpoint($lg) {
     font-size: $font-xl;

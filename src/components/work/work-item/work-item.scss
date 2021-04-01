@@ -29,7 +29,7 @@
 
   @include breakpoint($lg) {
     width: 45rem;
-    padding: $spacing-lg $spacing-lg 8rem;
+    padding: $spacing-md $spacing-md 8rem;
   }
 
   img {

@@ -13,7 +13,7 @@
   &__content {
     position: relative;
     margin: auto;
-    padding-top: $spacing-lg;
+    padding-top: $spacing-md;
 
     @include breakpoint($lg) {
       padding-top: $spacing-xl;
