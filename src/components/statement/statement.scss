@@ -2,6 +2,7 @@
   &__container {
     display: flex;
     height: 100%;
+    text-align: center;
   }
 
   &__title {
@@ -19,15 +20,24 @@
     }
 
     @include breakpoint($xl) {
-      font-size: 25rem;
+      font-size: 20rem;
     }
 
     @include breakpoint($xxl) {
-      font-size: 30rem;
+      font-size: 25rem;
     }
 
     &--center {
       margin: auto;
+    }
+
+    &--outline {
+      -webkit-text-stroke: 0.1rem $black;
+      color: transparent;
+    }
+
+    span {
+      display: block;
     }
   }
 }

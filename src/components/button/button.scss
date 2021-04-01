@@ -7,25 +7,46 @@
   border-width: 0.2rem;
   border-style: solid;
   cursor: pointer;
+  transition: all 0.1s ease-in-out;
 
   &--yellow {
     border-color: $yellow;
+
+    &:hover {
+      background-color: $yellow;
+    }
   }
 
   &--red {
     border-color: $red;
+
+    &:hover {
+      background-color: $red;
+    }
   }
 
   &--purple {
     border-color: $purple;
+
+    &:hover {
+      background-color: $purple;
+    }
   }
 
   &--lightblue {
     border-color: $lightblue;
+
+    &:hover {
+      background-color: $lightblue;
+    }
   }
 
   &--brown {
     border-color: $brown;
+
+    &:hover {
+      background-color: $brown;
+    }
   }
 
   a {

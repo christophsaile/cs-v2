@@ -1,7 +1,7 @@
 import React from 'react';
 import LocomotiveScroll from 'locomotive-scroll';
 import { debounce } from './helpers/debounce';
-import { map, clamp, randomNumber } from './helpers/utils';
+import { map, clamp } from './helpers/utils';
 
 // Components
 import Statement from './components/statement/statement';
@@ -52,36 +52,21 @@ class App extends React.Component<Props, State> {
       direction: this.state.isMobile ? 'vertical' : 'horizontal',
     });
 
-    const elems: HTMLElement[] = [].slice.call(document.querySelectorAll('.animationItem'));
-    const rotationsArr = Array.from({ length: elems.length }, () => randomNumber(-30, 30));
-    const translationArr = Array.from({ length: elems.length }, () => randomNumber(-100, 100));
     lscroll.on('scroll', (obj: any) => {
       for (const key of Object.keys(obj.currentElements)) {
-        const el = obj.currentElements[key].el;
-        const idx = elems.indexOf(el);
         if (obj.currentElements[key].el.classList.contains('animationItem')) {
           let progress = obj.currentElements[key].progress;
-          //const scaleVal = progress < 0.5 ? clamp(map(progress,0,0.5,1.2,0.5),0.5,1.2) : clamp(map(progress,0.5,1,0.5,1.2),0.5,1.2);
-          const rotationVal =
-            progress > 0.6
-              ? clamp(
-                  map(progress, 0.6, 1, 0, rotationsArr[idx]),
-                  Math.min(0, rotationsArr[idx]),
-                  Math.max(0, rotationsArr[idx])
-                )
-              : 0;
-          const translationVal =
-            progress > 0.6
-              ? clamp(
-                  map(progress, 0.6, 1, 0, translationArr[idx]),
-                  Math.min(0, translationArr[idx]),
-                  Math.max(0, translationArr[idx])
-                )
-              : 0;
-          //obj.currentElements[key].el.style.transform = `scale(${scaleVal})`
+          const saturateVal =
+            progress < 0.3
+              ? clamp(map(progress, 0, 0.3, 0, 1), 0.3, 1)
+              : clamp(map(progress, 0.7, 1, 1, 0), 0.3, 1);
+          const brightnessVal =
+            progress < 0.3
+              ? clamp(map(progress, 0, 0.3, 0, 1), 0.3, 1)
+              : clamp(map(progress, 0.7, 1, 1, 0), 0.3, 1);
           obj.currentElements[
             key
-          ].el.style.transform = `translateY(${translationVal}%) rotate(${rotationVal}deg)`;
+          ].el.style.filter = `saturate(${saturateVal}) brightness(${brightnessVal})`;
         }
       }
     });
@@ -108,10 +93,13 @@ class App extends React.Component<Props, State> {
             <Timeline data={TimelineContent} />
           </section>
           <section className='page' data-scroll-section>
-            <Statement outline={true}>
-              Scroll
-              <br />
-              Further
+            <Statement outline={true} center={true}>
+              <span data-scroll data-scroll-speed='-2' data-scroll-direction='vertical'>
+                Scroll
+              </span>
+              <span data-scroll data-scroll-speed='1' data-scroll-direction='vertical'>
+                Further
+              </span>
             </Statement>
           </section>
           <section className='page' data-scroll-section>
@@ -121,7 +109,14 @@ class App extends React.Component<Props, State> {
             <Work />
           </section>
           <section className='page page--fullscreen' data-scroll-section>
-            <Statement center={true}>Thanks!</Statement>
+            <Statement outline={true} center={true}>
+              <span data-scroll data-scroll-speed='-2' data-scroll-direction='vertical'>
+                Thank
+              </span>
+              <span data-scroll data-scroll-speed='1' data-scroll-direction='vertical'>
+                You!
+              </span>
+            </Statement>
           </section>
         </section>
       </main>

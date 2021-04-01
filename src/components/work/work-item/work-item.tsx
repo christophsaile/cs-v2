@@ -1,18 +1,25 @@
 import React from 'react';
+import { isEven } from '../../../helpers/utils';
 
 type Props = {
+  id: number;
   title: string;
-  img: string;
   link: string;
 };
 
 class WorkItem extends React.Component<Props> {
   render() {
     return (
-      <div className='workItem animationItem' data-scroll data-scroll-speed='1'>
-        <h3>{this.props.title}</h3>
+      <div
+        className='workItem animationItem'
+        data-scroll
+        data-scroll-speed={isEven(this.props.id) ? '-2' : '2'}
+        data-scroll-direction='vertical'
+      >
+        <h3 data-scroll data-scroll-speed='1'>
+          {this.props.title}
+        </h3>
         <p>{this.props.children}</p>
-        <img src={this.props.img} alt={this.props.title} />
         <div className='workItem__explore'>
           <a target='_blank' rel='noreferrer' href={this.props.link}>
             explore
