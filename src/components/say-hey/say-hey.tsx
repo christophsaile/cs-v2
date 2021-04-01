@@ -1,6 +1,6 @@
 import React from 'react';
-import { ReactComponent as SayHeySvg } from '../../assets/imgs/say-hey.svg';
-import { ReactComponent as Smiley } from '../../assets/imgs/smiley.svg';
+import SayHeySvg from '../../assets/imgs/say-hey.svg';
+import Smiley from '../../assets/imgs/smiley.svg';
 import { ReactComponent as Cancel } from '../../assets/imgs/cancel.svg';
 import Button from '../button/button';
 
@@ -31,7 +31,7 @@ class SayHey extends React.Component<Props, State> {
     return (
       <section className='sayHey__container'>
         <div className='sayHey__icon' onClick={this.toggleMenu}>
-          <SayHeySvg title='Say Hey Icon' />
+          <img src={SayHeySvg} />
         </div>
         <section
           className={
@@ -44,7 +44,7 @@ class SayHey extends React.Component<Props, State> {
             </div>
             <div className='sayHey__smiley'>
               <a href='mailto:christoph.saile@googlemail.com'>
-                <Smiley title='Email' />
+                <img src={Smiley}></img>
               </a>
             </div>
             <div className='sayHey__social'>
