@@ -31,7 +31,7 @@ class SayHey extends React.Component<Props, State> {
     return (
       <section className='sayHey__container'>
         <div className='sayHey__icon' onClick={this.toggleMenu}>
-          <img src={SayHeySvg} />
+          <img src={SayHeySvg} alt='Open Menu' />
         </div>
         <section
           className={
@@ -44,7 +44,7 @@ class SayHey extends React.Component<Props, State> {
             </div>
             <div className='sayHey__smiley'>
               <a href='mailto:christoph.saile@googlemail.com'>
-                <img src={Smiley}></img>
+                <img src={Smiley} alt='Mail' />
               </a>
             </div>
             <div className='sayHey__social'>
