@@ -134,11 +134,9 @@ class App extends React.Component<Props, State> {
           <section className='page' data-scroll-section>
             <Work />
           </section>
-          <section className='page page--fullscreen' data-scroll-section>
+          <section className='page' data-scroll-section>
             <Statement center={true}>
-              <span data-scroll data-scroll-speed='1' data-scroll-direction='vertical'>
-                Thanks!
-              </span>
+              <span>Thanks!</span>
             </Statement>
           </section>
         </section>
