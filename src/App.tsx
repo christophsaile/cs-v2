@@ -33,12 +33,13 @@ class App extends React.Component<Props, State> {
     this.handleMenu = this.handleMenu.bind(this);
   }
 
-  private checkScreenSize = (): boolean => {
-    return window.innerWidth > 768 ? false : true;
-  };
-
   private handleResize = (): void => {
     this.checkScreenSize() ? this.setState({ isMobile: true }) : this.setState({ isMobile: false });
+    window.location.reload();
+  };
+
+  private checkScreenSize = (): boolean => {
+    return window.innerWidth > 768 ? false : true;
   };
 
   private handleMenu(): void {
@@ -55,11 +56,14 @@ class App extends React.Component<Props, State> {
       }, 250)
     );
 
-    // eslint-disable-next-line
     const lscroll = new LocomotiveScroll({
       el: document.querySelector('[data-scroll-container]'),
       smooth: true,
-      direction: this.state.isMobile ? 'vertical' : 'horizontal',
+      direction: 'horizontal',
+      smartphone: {
+        smooth: true,
+        direction: 'vertical',
+      },
     });
 
     lscroll.on('scroll', (obj: any) => {
@@ -80,10 +84,19 @@ class App extends React.Component<Props, State> {
         }
       }
     });
+
     lscroll.update();
   }
 
   render() {
+    const setScroll = (scroll: boolean, scrollSpeed: number, scrollDirection?: string) => {
+      return {
+        'data-scroll': scroll,
+        'data-scroll-speed': scrollSpeed,
+        'data-scroll-direction': scrollDirection,
+      };
+    };
+
     return (
       <main data-scroll-container>
         <section className='content'>
@@ -98,14 +111,18 @@ class App extends React.Component<Props, State> {
               className='intro__img'
               src={ChrisCam}
               alt='Portrait Christoph Saile'
-              data-scroll
-              data-scroll-speed='-2'
-              data-scroll-direction='vertical'
+              {...(this.state.isMobile
+                ? setScroll(true, -4, 'horizontal')
+                : setScroll(true, -4, 'vertical'))}
             />
           </section>
           <section className='page' data-scroll-section>
             <Statement>
-              <span data-scroll data-scroll-speed='-4' data-scroll-direction='vertical'>
+              <span
+                {...(this.state.isMobile
+                  ? setScroll(true, 1, 'vertical')
+                  : setScroll(true, -4, 'vertical'))}
+              >
                 Àpropos
               </span>
             </Statement>

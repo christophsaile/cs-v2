@@ -18,7 +18,11 @@
   }
 
   &:last-child {
-    margin-right: 50vw;
+    margin: 0 0 50vh 0;
+
+    @include breakpoint($md) {
+      margin: 0 50vw 0 0;
+    }
   }
 }
 

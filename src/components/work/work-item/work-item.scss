@@ -1,9 +1,8 @@
 .workItem {
   position: relative;
   width: 100%;
-  margin-top: 35rem;
+  margin-top: $spacing-md;
   padding: $spacing-sm;
-  padding-top: 14rem;
   padding-bottom: $spacing-xl;
   background-color: $white;
   box-shadow: $boxshadow;
