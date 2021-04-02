@@ -87,7 +87,6 @@ class App extends React.Component<Props, State> {
     return (
       <main data-scroll-container>
         <section className='content'>
-          <div className='background' data-scroll-section></div>
           <SayHey isMenuOpen={this.state.isMenuOpen} onMenuChange={this.handleMenu} />
           <section className='page page--fullscreen intro' data-scroll-section>
             <Statement center={true}>

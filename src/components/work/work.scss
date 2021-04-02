@@ -3,6 +3,11 @@
 .work {
   display: flex;
   height: 100%;
+  padding: 5rem 0 7.5rem;
+
+  @include breakpoint($md) {
+    padding: 0 15rem;
+  }
 
   &__content {
     display: flex;

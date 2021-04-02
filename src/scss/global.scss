@@ -16,6 +16,10 @@
       width: 100vw;
     }
   }
+
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 .content {
@@ -35,9 +39,6 @@
   right: 0;
   height: 100%;
   width: 100%;
-  background-image: url('../assets/imgs/background.png');
-  background-size: auto 100%;
-  background-repeat: repeat-x;
 }
 
 .intro {

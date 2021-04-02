@@ -6,6 +6,7 @@
   position: relative;
   align-items: center;
   padding: 5rem 0 7.5rem;
+  background-image: url(../../assets/imgs/background-triangle.png);
 
   @include breakpoint($md) {
     flex-direction: row;
