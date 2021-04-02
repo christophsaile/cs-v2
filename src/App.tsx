@@ -68,7 +68,7 @@ class App extends React.Component<Props, State> {
         smooth: true,
         direction: 'vertical',
       },
-      table: {
+      tablet: {
         smooth: true,
         direction: 'horizontal',
         horizontalGesture: true,
