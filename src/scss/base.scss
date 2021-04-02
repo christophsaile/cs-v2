@@ -58,3 +58,16 @@ a {
     font-size: $font-md;
   }
 }
+
+.underline {
+  display: inline-block;
+
+  &::after {
+    content: '';
+    width: 0;
+    height: 0.2rem;
+    display: block;
+    background: $black;
+    transition: 200ms;
+  }
+}

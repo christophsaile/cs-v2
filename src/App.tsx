@@ -19,6 +19,7 @@ import ChrisCam from './assets/imgs/chris-cam.png';
 type Props = {};
 type State = {
   isMobile: boolean;
+  isMenuOpen: boolean;
 };
 class App extends React.Component<Props, State> {
   constructor(props: Props) {
@@ -26,7 +27,10 @@ class App extends React.Component<Props, State> {
 
     this.state = {
       isMobile: this.checkScreenSize(),
+      isMenuOpen: false,
     };
+
+    this.handleMenu = this.handleMenu.bind(this);
   }
 
   private checkScreenSize = (): boolean => {
@@ -36,6 +40,12 @@ class App extends React.Component<Props, State> {
   private handleResize = (): void => {
     this.checkScreenSize() ? this.setState({ isMobile: true }) : this.setState({ isMobile: false });
   };
+
+  private handleMenu(): void {
+    this.setState((state) => ({
+      isMenuOpen: !state.isMenuOpen,
+    }));
+  }
 
   componentDidMount() {
     window.addEventListener(
@@ -78,43 +88,57 @@ class App extends React.Component<Props, State> {
       <main data-scroll-container>
         <section className='content'>
           <div className='background' data-scroll-section></div>
-          <SayHey />
+          <SayHey isMenuOpen={this.state.isMenuOpen} onMenuChange={this.handleMenu} />
           <section className='page page--fullscreen intro' data-scroll-section>
-            <Statement center={true}>Hey{this.state.isMobile && <br />} You</Statement>
-            <img className='intro__img' src={ChrisCam} alt='Portrait Christoph Saile' />
+            <Statement center={true}>
+              <span data-scroll data-scroll-speed='2' data-scroll-direction='vertical'>
+                Hey{this.state.isMobile && <br />} You
+              </span>
+            </Statement>
+            <img
+              className='intro__img'
+              src={ChrisCam}
+              alt='Portrait Christoph Saile'
+              data-scroll
+              data-scroll-speed='-2'
+              data-scroll-direction='vertical'
+            />
           </section>
           <section className='page' data-scroll-section>
-            <Statement>Àpropos</Statement>
+            <Statement>
+              <span data-scroll data-scroll-speed='-4' data-scroll-direction='vertical'>
+                Àpropos
+              </span>
+            </Statement>
           </section>
           <section className='page' data-scroll-section>
-            <About />
+            <About onMenuChange={this.handleMenu} />
           </section>
           <section className='page' data-scroll-section>
             <Timeline data={TimelineContent} />
           </section>
           <section className='page' data-scroll-section>
-            <Statement outline={true} center={true}>
-              <span data-scroll data-scroll-speed='-2' data-scroll-direction='vertical'>
-                Scroll
-              </span>
-              <span data-scroll data-scroll-speed='1' data-scroll-direction='vertical'>
+            <Statement center={true}>
+              <span data-scroll data-scroll-speed='4' data-scroll-direction='vertical'>
+                Scroll <br />
                 Further
               </span>
             </Statement>
           </section>
           <section className='page' data-scroll-section>
-            <Statement>Créations</Statement>
+            <Statement>
+              <span data-scroll data-scroll-speed='-4' data-scroll-direction='vertical'>
+                Créations
+              </span>
+            </Statement>
           </section>
           <section className='page' data-scroll-section>
             <Work />
           </section>
           <section className='page page--fullscreen' data-scroll-section>
-            <Statement outline={true} center={true}>
-              <span data-scroll data-scroll-speed='-2' data-scroll-direction='vertical'>
-                Thank
-              </span>
+            <Statement center={true}>
               <span data-scroll data-scroll-speed='1' data-scroll-direction='vertical'>
-                You!
+                Thanks!
               </span>
             </Statement>
           </section>

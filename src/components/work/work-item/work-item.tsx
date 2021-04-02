@@ -16,7 +16,7 @@ class WorkItem extends React.Component<Props> {
         data-scroll-speed={isEven(this.props.id) ? '-2' : '2'}
         data-scroll-direction='vertical'
       >
-        <h3 data-scroll data-scroll-speed='1'>
+        <h3 className='underline' data-scroll data-scroll-speed='1'>
           {this.props.title}
         </h3>
         <p>{this.props.children}</p>

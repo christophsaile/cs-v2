@@ -25,6 +25,14 @@
     margin: 0;
   }
 
+  &:hover {
+    .underline {
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+
   &__title {
     font-weight: bold;
     padding-bottom: 2rem;

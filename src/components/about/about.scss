@@ -10,6 +10,14 @@
     width: 65rem;
   }
 
+  &:hover {
+    .underline {
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+
   &__content {
     position: relative;
     margin: auto;
@@ -31,5 +39,13 @@
 
   p:first-of-type {
     padding-bottom: 2rem;
+  }
+
+  .underline {
+    cursor: pointer;
+
+    &:hover::after {
+      width: 100%;
+    }
   }
 }

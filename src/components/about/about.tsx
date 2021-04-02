@@ -1,12 +1,26 @@
 import React from 'react';
 
-class About extends React.Component {
+type Props = {
+  onMenuChange: () => void;
+};
+
+class About extends React.Component<Props> {
+  constructor(props: Props) {
+    super(props);
+
+    this.toggleMenu = this.toggleMenu.bind(this);
+  }
+
+  private toggleMenu() {
+    this.props.onMenuChange();
+  }
+
   render() {
     return (
       <article className='about' data-scroll data-scroll-speed='1'>
         <div className='about__content'>
           <span className='about__stroke'></span>
-          <h3>Hello,</h3>
+          <h3>Hello everyone,</h3>
           <p>
             my name is <b>Christoph Saile</b>.
             <br />I am a <b>Frontend Developer</b> from Germany living in Furtwangen.
@@ -18,7 +32,10 @@ class About extends React.Component {
             Photography.
           </p>
           <p>
-            Feel free to <b>drop me a line!</b>
+            Feel free to{' '}
+            <span className='underline' onClick={this.toggleMenu}>
+              <b> drop me a line!</b>
+            </span>
           </p>
         </div>
       </article>

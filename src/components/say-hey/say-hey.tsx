@@ -4,27 +4,20 @@ import { ReactComponent as Smiley } from '../../assets/imgs/smiley.svg';
 import { ReactComponent as Cancel } from '../../assets/imgs/cancel.svg';
 import Button from '../button/button';
 
-type Props = {};
-
-type State = {
-  isOpen: boolean;
+type Props = {
+  onMenuChange: () => void;
+  isMenuOpen: boolean;
 };
 
-class SayHey extends React.Component<Props, State> {
+class SayHey extends React.Component<Props> {
   constructor(props: Props) {
     super(props);
-
-    this.state = {
-      isOpen: false,
-    };
 
     this.toggleMenu = this.toggleMenu.bind(this);
   }
 
-  private toggleMenu(): void {
-    this.setState((state) => ({
-      isOpen: !state.isOpen,
-    }));
+  private toggleMenu() {
+    this.props.onMenuChange();
   }
 
   render() {
@@ -35,7 +28,7 @@ class SayHey extends React.Component<Props, State> {
         </div>
         <section
           className={
-            this.state.isOpen ? 'sayHey__contact sayHey__contact--open' : 'sayHey__contact'
+            this.props.isMenuOpen ? 'sayHey__contact sayHey__contact--open' : 'sayHey__contact'
           }
         >
           <div className='sayHey__content'>
