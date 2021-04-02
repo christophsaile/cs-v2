@@ -68,6 +68,11 @@ class App extends React.Component<Props, State> {
         smooth: true,
         direction: 'vertical',
       },
+      table: {
+        smooth: true,
+        direction: 'horizontal',
+        horizontalGesture: true,
+      },
     });
 
     lscroll.on('scroll', (obj: any) => {
