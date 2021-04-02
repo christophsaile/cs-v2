@@ -1,5 +1,6 @@
 import React from 'react';
 import LocomotiveScroll from 'locomotive-scroll';
+import { isMobile, isTablet } from 'react-device-detect';
 import { debounce } from './helpers/debounce';
 import { map, clamp } from './helpers/utils';
 
@@ -21,6 +22,7 @@ type State = {
   isMobile: boolean;
   isMenuOpen: boolean;
 };
+
 class App extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props);
@@ -35,7 +37,9 @@ class App extends React.Component<Props, State> {
 
   private handleResize = (): void => {
     this.checkScreenSize() ? this.setState({ isMobile: true }) : this.setState({ isMobile: false });
-    window.location.reload();
+    if (!isMobile && !isTablet) {
+      window.location.reload();
+    }
   };
 
   private checkScreenSize = (): boolean => {
@@ -103,7 +107,7 @@ class App extends React.Component<Props, State> {
           <SayHey isMenuOpen={this.state.isMenuOpen} onMenuChange={this.handleMenu} />
           <section className='page page--fullscreen intro' data-scroll-section>
             <Statement center={true}>
-              <span data-scroll data-scroll-speed='2' data-scroll-direction='vertical'>
+              <span data-scroll data-scroll-speed='-2' data-scroll-direction='vertical'>
                 Hey{this.state.isMobile && <br />} You
               </span>
             </Statement>
@@ -112,19 +116,13 @@ class App extends React.Component<Props, State> {
               src={ChrisCam}
               alt='Portrait Christoph Saile'
               {...(this.state.isMobile
-                ? setScroll(true, -4, 'horizontal')
-                : setScroll(true, -4, 'vertical'))}
+                ? setScroll(true, 1, 'vertical')
+                : setScroll(true, -1, 'vertical'))}
             />
           </section>
           <section className='page' data-scroll-section>
             <Statement>
-              <span
-                {...(this.state.isMobile
-                  ? setScroll(true, 1, 'vertical')
-                  : setScroll(true, -4, 'vertical'))}
-              >
-                Àpropos
-              </span>
+              <span {...(this.state.isMobile ? '' : setScroll(true, -4, 'vertical'))}>Àpropos</span>
             </Statement>
           </section>
           <section className='page' data-scroll-section>
