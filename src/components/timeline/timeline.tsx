@@ -1,5 +1,6 @@
 import React from 'react';
 import TimelineItem from './timeline-item/timeline-item';
+import Background from '../background/background';
 
 type Content = {
   id: number;
@@ -16,6 +17,7 @@ class Timeline extends React.Component<Props> {
   render() {
     return (
       <section className='timeline'>
+        <Background section='timeline' items={5} form={'triangle'} />
         <span className='timeline__stroke'></span>
         <div className='timeline__content'>
           {this.props.data.map((_item: Content) => (
