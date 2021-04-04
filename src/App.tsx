@@ -122,7 +122,7 @@ class App extends React.Component<Props, State> {
               alt='Portrait Christoph Saile'
               {...(this.state.isMobile
                 ? setScroll(true, 1, 'vertical')
-                : setScroll(true, -1, 'vertical'))}
+                : setScroll(true, 2, 'vertical'))}
             />
           </section>
           <section className='page' data-scroll-section>
