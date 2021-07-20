@@ -12,6 +12,7 @@ import Work from './components/work/work';
 
 // Content
 import TimelineContent from './components/timeline/timeline-data.json';
+import WorkContent from './components/work/work-data.json';
 
 // Assets
 import SayHey from './components/say-hey/say-hey';
@@ -152,7 +153,7 @@ class App extends React.Component<Props, State> {
             </Statement>
           </section>
           <section className='page' data-scroll-section>
-            <Work />
+            <Work data={WorkContent}/>
           </section>
           <section className='page' data-scroll-section>
             <Statement center={true}>
