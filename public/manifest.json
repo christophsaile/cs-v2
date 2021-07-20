@@ -1,6 +1,11 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "theme_color": "#efefe6",
+  "background_color": "#efefe6",
+  "display": "standalone",
+  "start_url": "./",
+  "scope": ".",
+  "name": "Christoph Saile - Portfolio",
+  "short_name": "Christoph Saile",
   "icons": [
     {
       "src": "favicon.ico",
@@ -17,9 +22,5 @@
       "type": "image/png",
       "sizes": "512x512"
     }
-  ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  ]
 }
