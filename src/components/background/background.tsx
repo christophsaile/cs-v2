@@ -20,10 +20,10 @@ class Background extends React.Component<Props> {
           let item;
           switch (form) {
             case 'triangle':
-              item = <Triangle className={`${form} ${form + '__' + number}`} />;
+              item = <Triangle key={number} className={`${form} ${form + '__' + number}`} />;
               break;
             case 'circle':
-              item = <Circle className={`${form} ${form + '__' + number}`} />;
+              item = <Circle key={number} className={`${form} ${form + '__' + number}`} />;
               break;
           }
           return item;

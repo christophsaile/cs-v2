@@ -19,7 +19,7 @@ class WorkItem extends React.Component<Props> {
         <h3 className='underline' data-scroll data-scroll-speed='1'>
           {this.props.title}
         </h3>
-        <p>{this.props.children}</p>
+        {this.props.children}
         <div className='workItem__explore'>
           <a target='_blank' rel='noreferrer' href={this.props.link}>
             explore

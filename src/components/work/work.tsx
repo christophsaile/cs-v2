@@ -23,7 +23,7 @@ class Work extends React.Component<Props> {
         <div className='work__content'>
           {this.props.data.map((_item: Content) => (
             <WorkItem key={_item.id} id={_item.id} title={_item.title} link={_item.link}>
-              <div dangerouslySetInnerHTML={this.createMarkup(_item.description)} />
+              <p dangerouslySetInnerHTML={this.createMarkup(_item.description)} />
             </WorkItem>
           ))}
         </div>
