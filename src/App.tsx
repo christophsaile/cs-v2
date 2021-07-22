@@ -3,6 +3,7 @@ import LocomotiveScroll from 'locomotive-scroll';
 import { isMobile, isTablet } from 'react-device-detect';
 import { debounce } from './helpers/debounce';
 import { map, clamp } from './helpers/utils';
+import { setScroll } from './helpers/setScroll';
 
 // Components
 import Statement from './components/statement/statement';
@@ -66,7 +67,7 @@ class App extends React.Component<Props, State> {
       smooth: true,
       direction: 'horizontal',
       smartphone: {
-        smooth: true,
+        smooth: false,
         direction: 'vertical',
       },
       tablet: {
@@ -99,21 +100,13 @@ class App extends React.Component<Props, State> {
   }
 
   render() {
-    const setScroll = (scroll: boolean, scrollSpeed: number, scrollDirection?: string) => {
-      return {
-        'data-scroll': scroll,
-        'data-scroll-speed': scrollSpeed,
-        'data-scroll-direction': scrollDirection,
-      };
-    };
-
     return (
       <main data-scroll-container>
         <section className='content'>
           <SayHey isMenuOpen={this.state.isMenuOpen} onMenuChange={this.handleMenu} />
           <section className='page page--fullscreen intro' data-scroll-section>
             <Statement center={true}>
-              <span data-scroll data-scroll-speed='-2' data-scroll-direction='vertical'>
+              <span {...setScroll(true, -2, 'vertical')}>
                 Hey{this.state.isMobile && <br />} You
               </span>
             </Statement>
@@ -121,14 +114,12 @@ class App extends React.Component<Props, State> {
               className='intro__img'
               src={ChrisCam}
               alt='Portrait Christoph Saile'
-              {...(this.state.isMobile
-                ? setScroll(true, 1, 'vertical')
-                : setScroll(true, 2, 'vertical'))}
+              {...setScroll(true, 2, 'vertical')}
             />
           </section>
           <section className='page' data-scroll-section>
             <Statement>
-              <span {...(this.state.isMobile ? '' : setScroll(true, -4, 'vertical'))}>Àpropos</span>
+              <span {...setScroll(true, -4, 'vertical')}>Àpropos</span>
             </Statement>
           </section>
           <section className='page' data-scroll-section>
@@ -139,7 +130,7 @@ class App extends React.Component<Props, State> {
           </section>
           <section className='page' data-scroll-section>
             <Statement center={true}>
-              <span data-scroll data-scroll-speed='4' data-scroll-direction='vertical'>
+              <span {...setScroll(true, 4, 'vertical')}>
                 Scroll <br />
                 Further
               </span>
@@ -147,13 +138,11 @@ class App extends React.Component<Props, State> {
           </section>
           <section className='page' data-scroll-section>
             <Statement>
-              <span data-scroll data-scroll-speed='-4' data-scroll-direction='vertical'>
-                Créations
-              </span>
+              <span {...setScroll(true, -4, 'vertical')}>Créations</span>
             </Statement>
           </section>
           <section className='page' data-scroll-section>
-            <Work data={WorkContent}/>
+            <Work data={WorkContent} />
           </section>
           <section className='page' data-scroll-section>
             <Statement center={true}>
