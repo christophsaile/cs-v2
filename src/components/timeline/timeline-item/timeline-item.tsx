@@ -1,4 +1,5 @@
 import React from 'react';
+import { setScroll } from '../../../helpers/setScroll';
 import { isEven } from '../../../helpers/utils';
 
 type Props = {
@@ -13,11 +14,9 @@ class TimelineItem extends React.Component<Props> {
     return (
       <section
         className='timelineItem animationItem'
-        data-scroll
-        data-scroll-speed={isEven(this.props.id) ? '-2' : '2'}
-        data-scroll-direction='vertical'
+        {...setScroll(true, isEven(this.props.id) ? -2 : 2, 'vertical')}
       >
-        <h3 className='underline' data-scroll data-scroll-speed='1'>
+        <h3 className='underline' {...setScroll(true, 1)}>
           {this.props.year}
         </h3>
         <p className='timelineItem__title'>{this.props.title}</p>

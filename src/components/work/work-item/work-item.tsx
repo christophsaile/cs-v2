@@ -1,4 +1,5 @@
 import React from 'react';
+import { setScroll } from '../../../helpers/setScroll';
 import { isEven } from '../../../helpers/utils';
 
 type Props = {
@@ -12,11 +13,9 @@ class WorkItem extends React.Component<Props> {
     return (
       <div
         className='workItem animationItem'
-        data-scroll
-        data-scroll-speed={isEven(this.props.id) ? '-2' : '2'}
-        data-scroll-direction='vertical'
+        {...setScroll(true, isEven(this.props.id) ? -2 : 2, 'vertical')}
       >
-        <h3 className='underline' data-scroll data-scroll-speed='1'>
+        <h3 className='underline' {...setScroll(true, 1)}>
           {this.props.title}
         </h3>
         {this.props.children}

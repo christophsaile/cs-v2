@@ -1,4 +1,5 @@
 import React from 'react';
+import { setScroll } from '../../helpers/setScroll';
 
 type Props = {
   onMenuChange: () => void;
@@ -17,7 +18,7 @@ class About extends React.Component<Props> {
 
   render() {
     return (
-      <article className='about' data-scroll data-scroll-speed='1'>
+      <article className='about' {...setScroll(true, 1)}>
         <div className='about__content'>
           <span className='about__stroke'></span>
           <h3>Hello everyone,</h3>
