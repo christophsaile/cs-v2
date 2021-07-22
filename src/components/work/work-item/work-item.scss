@@ -1,11 +1,15 @@
 .workItem {
   position: relative;
   width: 100%;
-  margin-top: $spacing-md;
+  margin-top: $spacing-xl;
   padding: $spacing-sm;
   padding-bottom: $spacing-xl;
   background-color: $white;
   box-shadow: $boxshadow;
+
+  @include breakpoint($md) {
+    margin-top: $spacing-md;
+  }
 
   &:hover {
     .underline {
@@ -13,10 +17,6 @@
         width: 100%;
       }
     }
-  }
-
-  &:first-child {
-    margin-top: 25rem;
   }
 
   @include breakpoint($md) {

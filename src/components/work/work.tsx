@@ -21,7 +21,7 @@ class Work extends React.Component<Props> {
   render() {
     return (
       <section className='work'>
-        <Background section='work' items={5} form={'circle'} />
+        <Background section='work' items={5} form={'triangle'} />
         <div className='work__content'>
           {this.props.data.map((_item: Content) => (
             <WorkItem key={_item.id} id={_item.id} title={_item.title} link={_item.link}>

@@ -1,6 +1,7 @@
 .page {
   width: auto;
   padding: $spacing-sm;
+  position: relative;
 
   @include breakpoint($md) {
     padding: 0;
@@ -18,10 +19,11 @@
   }
 
   &:last-child {
-    margin: 0 0 50vh 0;
+    height: 100vh;
 
     @include breakpoint($md) {
       margin: 0 50vw 0 0;
+      height: auto;
     }
   }
 }
@@ -31,9 +33,11 @@
   flex-direction: column;
   position: relative;
   height: 100%;
+  max-width: 100%;
 
   @include breakpoint($md) {
     flex-direction: row;
+    max-width: none;
   }
 }
 
@@ -46,8 +50,6 @@
 }
 
 .intro {
-  position: relative;
-
   .statement__container {
     .statement__title {
       @include breakpoint($max-md) {
