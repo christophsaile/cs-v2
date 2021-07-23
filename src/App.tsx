@@ -118,14 +118,14 @@ class App extends React.Component<Props, State> {
     const heyYouText = this.heyYouTextRef.current;
     const heyYouImg = this.heyYouImgRef.current;
 
-    heyYouText?.classList.add('animate__animated', 'animate__fadeInUp');
-    heyYouImg?.classList.add('animate__animated', 'animate__fadeInDown', 'animate__delay-1s');
+    heyYouText?.classList.add('animate__animated', 'animate__fadeIn');
+    heyYouImg?.classList.add('animate__animated', 'animate__fadeIn', 'animate__delay-1s');
 
     heyYouText?.addEventListener('animationend', () => {
-      heyYouText.classList.remove('animate__animated', 'animate__fadeInUp');
+      heyYouText.classList.remove('animate__animated', 'animate__fadeIn');
     });
     heyYouImg?.addEventListener('animationend', () => {
-      heyYouImg.classList.remove('animate__animated', 'animate__fadeInDown', 'animate__delay-1s');
+      heyYouImg.classList.remove('animate__animated', 'animate__fadeIn', 'animate__delay-1s');
     });
   };
 
