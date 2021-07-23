@@ -52,7 +52,7 @@ class App extends React.Component<Props, State> {
     );
 
     this.initLocomovitveScroll();
-    this.initAnimation();
+    //this.initAnimation();
   }
 
   private handleResize = (): void => {
