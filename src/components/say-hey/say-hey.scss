@@ -17,6 +17,16 @@
       border-color: $black;
     }
 
+    svg {
+      animation: rotate 20s linear infinite;
+    }
+
+    @keyframes rotate {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
     @include breakpoint($md) {
       width: 12rem;
       height: 12rem;

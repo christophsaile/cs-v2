@@ -12,7 +12,6 @@ type Props = {
 class SayHey extends React.Component<Props> {
   constructor(props: Props) {
     super(props);
-
     this.toggleMenu = this.toggleMenu.bind(this);
   }
 

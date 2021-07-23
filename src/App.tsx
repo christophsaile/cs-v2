@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { createRef, RefObject } from 'react';
 import LocomotiveScroll from 'locomotive-scroll';
 import { isMobile, isTablet } from 'react-device-detect';
 import { debounce } from './helpers/debounce';
@@ -26,6 +26,9 @@ type State = {
 };
 
 class App extends React.Component<Props, State> {
+  private heyYouTextRef: RefObject<HTMLElement>;
+  private heyYouImgRef: RefObject<HTMLImageElement>;
+
   constructor(props: Props) {
     super(props);
 
@@ -35,6 +38,21 @@ class App extends React.Component<Props, State> {
     };
 
     this.handleMenu = this.handleMenu.bind(this);
+
+    this.heyYouTextRef = createRef();
+    this.heyYouImgRef = createRef();
+  }
+
+  componentDidMount() {
+    window.addEventListener(
+      'resize',
+      debounce(() => {
+        this.handleResize();
+      }, 250)
+    );
+
+    this.initLocomovitveScroll();
+    this.initAnimation();
   }
 
   private handleResize = (): void => {
@@ -54,14 +72,7 @@ class App extends React.Component<Props, State> {
     }));
   }
 
-  componentDidMount() {
-    window.addEventListener(
-      'resize',
-      debounce(() => {
-        this.handleResize();
-      }, 250)
-    );
-
+  private initLocomovitveScroll = (): void => {
     const lscroll = new LocomotiveScroll({
       el: document.querySelector('[data-scroll-container]'),
       smooth: true,
@@ -97,7 +108,22 @@ class App extends React.Component<Props, State> {
     });
 
     lscroll.update();
-  }
+  };
+
+  private initAnimation = (): void => {
+    const heyYouText = this.heyYouTextRef.current;
+    const heyYouImg = this.heyYouImgRef.current;
+
+    heyYouText?.classList.add('animate__animated', 'animate__fadeInUp');
+    heyYouImg?.classList.add('animate__animated', 'animate__fadeInDown', 'animate__delay-1s');
+
+    heyYouText?.addEventListener('animationend', () => {
+      heyYouText.classList.remove('animate__animated', 'animate__fadeInUp');
+    });
+    heyYouImg?.addEventListener('animationend', () => {
+      heyYouImg.classList.remove('animate__animated', 'animate__fadeInDown', 'animate__delay-1s');
+    });
+  };
 
   render() {
     return (
@@ -106,11 +132,12 @@ class App extends React.Component<Props, State> {
           <SayHey isMenuOpen={this.state.isMenuOpen} onMenuChange={this.handleMenu} />
           <section className='page page--fullscreen intro' data-scroll-section>
             <Statement center={true}>
-              <span {...setScroll(true, -2, 'vertical')}>
+              <span ref={this.heyYouTextRef} {...setScroll(true, -2, 'vertical')}>
                 Hey{this.state.isMobile && <br />} You
               </span>
             </Statement>
             <img
+              ref={this.heyYouImgRef}
               className='intro__img'
               src={ChrisCam}
               alt='Portrait Christoph Saile'
