@@ -51,7 +51,7 @@ class App extends React.Component<Props, State> {
       }, 250)
     );
 
-    this.initLocomovitveScroll();
+    this.initLscroll();
     if (!this.state.isMobile) this.initAnimation();
   }
 
@@ -72,7 +72,7 @@ class App extends React.Component<Props, State> {
     }));
   }
 
-  private initLocomovitveScroll = (): void => {
+  private initLscroll = (): void => {
     const lscroll = new LocomotiveScroll({
       el: document.querySelector('[data-scroll-container]'),
       smooth: true,
@@ -135,8 +135,8 @@ class App extends React.Component<Props, State> {
         <section className='content'>
           <SayHey isMenuOpen={this.state.isMenuOpen} onMenuChange={this.handleMenu} />
           <section className='page page--fullscreen intro' data-scroll-section>
-            <Statement center={true}>
-              <span ref={this.heyYouTextRef} {...setScroll(true, -2, 'vertical')}>
+            <Statement>
+              <span {...setScroll(true, -2, 'vertical')} ref={this.heyYouTextRef}>
                 Hey{this.state.isMobile && <br />} You
               </span>
             </Statement>
