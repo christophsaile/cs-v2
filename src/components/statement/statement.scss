@@ -39,5 +39,17 @@
     span {
       display: block;
     }
+
+    @include breakpoint($max-md) {
+      [data-scroll] {
+        opacity: 0;
+        transition: 0.6s $transition;
+      }
+
+      .is-inview {
+        opacity: 1;
+        transition-delay: 0.1s;
+      }
+    }
   }
 }

@@ -70,6 +70,20 @@
     height: 60vh;
     max-width: 100%;
 
+    @include breakpoint($max-md) {
+      &[data-scroll] {
+        opacity: 0;
+        transform: translateY(6rem);
+        transition: 0.6s $transition;
+      }
+
+      &.is-inview {
+        opacity: 1;
+        transform: none;
+        transition-delay: 0.2s;
+      }
+    }
+
     @include breakpoint($md) {
       top: 0;
       bottom: 0;

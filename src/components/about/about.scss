@@ -37,12 +37,50 @@
     background-color: $black;
   }
 
-  p:first-of-type {
-    padding-bottom: 2rem;
+  h3 {
+    @include breakpoint($max-md) {
+      &[data-scroll] {
+        opacity: 0;
+        transition: 0.6s $transition;
+      }
+
+      &.is-inview {
+        opacity: 1;
+        transition-delay: 0.1s;
+      }
+    }
+  }
+
+  p {
+    @include breakpoint($max-md) {
+      &[data-scroll] {
+        opacity: 0;
+        transition: 0.6s $transition;
+      }
+
+      &.is-inview {
+        opacity: 1;
+        transition-delay: 0.2s;
+
+        &:last-of-type {
+          transition-delay: 0.3s;
+        }
+      }
+    }
+
+    &:first-of-type {
+      padding-bottom: 2rem;
+    }
   }
 
   .underline {
     cursor: pointer;
+
+    @include breakpoint($max-md) {
+      &::after {
+        width: 100%;
+      }
+    }
 
     &:hover::after {
       width: 100%;

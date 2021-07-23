@@ -52,7 +52,7 @@ class App extends React.Component<Props, State> {
     );
 
     this.initLocomovitveScroll();
-    //this.initAnimation();
+    if (!this.state.isMobile) this.initAnimation();
   }
 
   private handleResize = (): void => {
@@ -88,7 +88,11 @@ class App extends React.Component<Props, State> {
       },
     });
 
-    lscroll.on('scroll', (obj: any) => {
+    if (!this.state.isMobile) this.animateItems(lscroll);
+  };
+
+  private animateItems = (_lscroll: any) => {
+    _lscroll.on('scroll', (obj: any) => {
       for (const key of Object.keys(obj.currentElements)) {
         if (obj.currentElements[key].el.classList.contains('animationItem')) {
           let progress = obj.currentElements[key].progress;
@@ -107,7 +111,7 @@ class App extends React.Component<Props, State> {
       }
     });
 
-    lscroll.update();
+    _lscroll.update();
   };
 
   private initAnimation = (): void => {
@@ -173,7 +177,7 @@ class App extends React.Component<Props, State> {
           </section>
           <section className='page' data-scroll-section>
             <Statement center={true}>
-              <span>Thanks!</span>
+              <span {...setScroll(true)}>Thanks!</span>
             </Statement>
           </section>
         </section>
