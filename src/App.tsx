@@ -4,6 +4,7 @@ import { isMobile, isTablet } from 'react-device-detect';
 import { debounce } from './helpers/debounce';
 import { map, clamp } from './helpers/utils';
 import { setScroll } from './helpers/setScroll';
+import { addAnimation } from './helpers/addAnimation';
 
 // Components
 import Statement from './components/statement/statement';
@@ -85,6 +86,7 @@ class App extends React.Component<Props, State> {
         smooth: true,
         direction: 'horizontal',
         horizontalGesture: true,
+        breakpoint: 768,
       },
     });
 
@@ -117,16 +119,8 @@ class App extends React.Component<Props, State> {
   private initAnimation = (): void => {
     const heyYouText = this.heyYouTextRef.current;
     const heyYouImg = this.heyYouImgRef.current;
-
-    heyYouText?.classList.add('animate__animated', 'animate__fadeIn');
-    heyYouImg?.classList.add('animate__animated', 'animate__fadeIn', 'animate__delay-1s');
-
-    heyYouText?.addEventListener('animationend', () => {
-      heyYouText.classList.remove('animate__animated', 'animate__fadeIn');
-    });
-    heyYouImg?.addEventListener('animationend', () => {
-      heyYouImg.classList.remove('animate__animated', 'animate__fadeIn', 'animate__delay-1s');
-    });
+    if (heyYouText) addAnimation(heyYouText, 'fadeIn', true);
+    if (heyYouImg) addAnimation(heyYouImg, 'fadeIn', true, 1);
   };
 
   render() {

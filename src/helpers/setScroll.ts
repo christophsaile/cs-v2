@@ -1,7 +1,7 @@
-export const setScroll = (scroll: boolean, scrollSpeed?: number, scrollDirection?: string) => {
+export const setScroll = (_scroll: boolean, _scrollSpeed?: number, _scrollDirection?: string) => {
   return {
-    'data-scroll': scroll,
-    'data-scroll-speed': scrollSpeed,
-    'data-scroll-direction': scrollDirection,
+    'data-scroll': _scroll,
+    'data-scroll-speed': _scrollSpeed,
+    'data-scroll-direction': _scrollDirection,
   };
 };
