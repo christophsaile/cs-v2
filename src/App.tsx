@@ -120,7 +120,7 @@ class App extends React.Component<Props, State> {
     const heyYouText = this.heyYouTextRef.current;
     const heyYouImg = this.heyYouImgRef.current;
     if (heyYouText) addAnimation(heyYouText, 'fadeIn', true);
-    if (heyYouImg) addAnimation(heyYouImg, 'fadeIn', true, 1);
+    if (heyYouImg) addAnimation(heyYouImg, 'fadeIn', true, '06');
   };
 
   render() {

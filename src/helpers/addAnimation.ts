@@ -1,8 +1,8 @@
 export const addAnimation = (
-  _elem: HTMLElement,
+  _elem: HTMLElement | SVGSVGElement,
   _effect: string,
   _removeAfterAnimation: boolean,
-  _delay?: number
+  _delay?: string
 ): void => {
   const effectClasslist = ['animate__animated', 'animate__' + _effect];
   const delayClasslist = ['animate__delay-' + _delay + 's'];

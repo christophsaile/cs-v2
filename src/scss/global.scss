@@ -1,3 +1,15 @@
+.animate__delay-02s {
+  animation-delay: calc(var(--animate-delay) * 0.2);
+}
+
+.animate__delay-04s {
+  animation-delay: calc(var(--animate-delay) * 0.4);
+}
+
+.animate__delay-06s {
+  animation-delay: calc(var(--animate-delay) * 0.6);
+}
+
 .page {
   width: auto;
   padding: $spacing-sm;
