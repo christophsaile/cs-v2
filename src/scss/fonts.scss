@@ -1,17 +1,8 @@
 @font-face {
-  font-family: 'mark_pro';
-  src: url('../assets/fonts/MARKPRO.woff2') format('woff2'),
-    url('../assets/fonts/MARKPRO.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'mark_pro_medium';
-  src: url('../assets/fonts/MARKPROMEDIUM.woff2') format('woff2'),
-    url('../assets/fonts/MARKPROMEDIUM.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'windsor_btroman';
-  src: url('../assets/fonts/windsor_bt-webfont.woff2') format('woff2'),
-    url('../assets/fonts/windsor_bt-webfont.woff') format('woff');
+  font-family: 'PoliteType';
+  src: url('../assets/fonts/PoliteType-Regular.woff2') format('woff2'),
+    url('../assets/fonts/PoliteType-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }

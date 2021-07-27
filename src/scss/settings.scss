@@ -1,12 +1,9 @@
 // colors
-$yellow: #fcac14;
-$brown: #a66333;
-$purple: #8b3bdb;
-$red: #f83d0c;
-$lightblue: #aac3cd;
-$offwhite: #efefe6;
 $white: #ffffff;
+$offwhite: #efefe6;
 $black: #000000;
+$darkblue: #14161a;
+$bluegrey: #78809e;
 
 // boxshadow
 $boxshadow: 0px 0px 5px #0000000a;
@@ -28,9 +25,7 @@ $z-sayHey: 5;
 $z-contact: 10;
 
 // fonts
-$font-family-windsor: 'windsor_btroman', serif;
-$font-family-markPro: 'mark_pro', sans-serif;
-$font-family-markProMedium: 'mark_pro_medium', sans-serif;
+$font-family: 'PoliteType', sans-serif;
 $font-weight-normal: 400;
 
 // font-sizes
@@ -48,9 +43,9 @@ $spacing-xl: 7rem;
 $spacing-xxl: 20vw;
 
 // body styles
-$body-color: $black;
-$body-bg-color: $offwhite;
-$body-font-family: $font-family-markPro;
+$body-color: $white;
+$body-bg-color: $darkblue;
+$body-font-family: $font-family;
 $body-font-weight: $font-weight-normal;
 $body-font-style: normal;
 $body-font-size: 1rem;
