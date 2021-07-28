@@ -1,5 +1,6 @@
 import React from 'react';
 
+// Assets
 import { ReactComponent as Triangle } from '../../assets/imgs/triangle.svg';
 import { ReactComponent as Circle } from '../../assets/imgs/circle.svg';
 

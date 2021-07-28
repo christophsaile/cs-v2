@@ -1,4 +1,6 @@
 import React from 'react';
+
+// Components
 import WorkItem from './work-item/work-item';
 
 type Content = {

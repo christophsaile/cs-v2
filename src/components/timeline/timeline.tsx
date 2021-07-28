@@ -1,4 +1,6 @@
 import React from 'react';
+
+// Components
 import TimelineItem from './timeline-item/timeline-item';
 
 type Content = {
