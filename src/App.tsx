@@ -44,7 +44,13 @@ class App extends React.Component<Props, State> {
   render() {
     return (
       <Router>
-        <Link to='/' className='logo'>
+        <Link
+          onClick={() => {
+            window.scrollTo(0, 0);
+          }}
+          to='/'
+          className='logo'
+        >
           chris
         </Link>
         <Switch>

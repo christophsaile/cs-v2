@@ -8,14 +8,6 @@
     margin-top: $spacing-md;
   }
 
-  &:hover {
-    .underline {
-      &::after {
-        width: 100%;
-      }
-    }
-  }
-
   @include breakpoint($md) {
     width: 40rem;
     margin-right: 25rem;
@@ -38,6 +30,7 @@
 
   &__meta {
     margin-bottom: $spacing-sm;
+    color: $bluegrey;
 
     span {
       margin-right: $spacing-xs;

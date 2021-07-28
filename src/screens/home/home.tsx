@@ -96,7 +96,7 @@ class Home extends React.Component<Props> {
           </section>
           <section className='page' data-scroll-section>
             <Statement center={true}>
-              <span {...setScroll(true)}>Thanks!</span>
+              <span {...setScroll(true)}>thanks for your interest in me, have a nice day.</span>
             </Statement>
           </section>
         </section>
