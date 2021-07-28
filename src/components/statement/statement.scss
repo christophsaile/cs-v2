@@ -2,11 +2,15 @@
   &__container {
     display: flex;
     height: 100%;
-    text-align: center;
+    padding-top: $spacing-md;
+
+    @include breakpoint($md) {
+      padding-top: 0;
+    }
   }
 
   &__title {
-    font-size: 6.5rem;
+    font-size: 4rem;
     margin: auto 0;
 
     @include breakpoint($md) {
@@ -24,7 +28,7 @@
     }
 
     @include breakpoint($xxl) {
-      font-size: 25rem;
+      font-size: 10rem;
     }
 
     &--center {
