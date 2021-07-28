@@ -1,32 +1,38 @@
 [
   {
     "id": 1,
-    "year": "2006/2014",
+    "year": "2006 - 2014",
     "title": "General qualification for University entrance",
     "info": "Eugen-Bolz-Gymnasium - Rottenburg"
   },
   {
     "id": 2,
-    "year": "2014/2015",
+    "year": "2014 - 2015",
     "title": "Federal voluntary service",
     "info": "Department of Urology - Tuebingen"
   },
   {
     "id": 3,
-    "year": "2015/2016",
+    "year": "2015 - 2016",
     "title": "Apprenticeship as an industrial salesman",
     "info": "Beton Kemmler GmbH - Hirschau"
   },
   {
     "id": 4,
-    "year": "2019/2020",
+    "year": "2019 - 2020",
     "title": "Practical study semester",
     "info": "Virtual Identity AG - Freiburg"
   },
   {
     "id": 5,
-    "year": "2018/today",
+    "year": "2018 - today",
     "title": "B.Sc. OnlineMedien",
     "info": "University of Furtwangen Facultiy of Digital Media"
+  },
+  {
+    "id": 6,
+    "year": "2020 - today",
+    "title": "Working student web-development",
+    "info": "Virtual Identity AG - Freiburg"
   }
 ]
