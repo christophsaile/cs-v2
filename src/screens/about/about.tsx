@@ -14,6 +14,7 @@ class Aboutme extends React.Component<Props> {
   private facebookRef: RefObject<HTMLAnchorElement>;
   private instagramRef: RefObject<HTMLAnchorElement>;
   private githubRef: RefObject<HTMLAnchorElement>;
+  private numberRef: RefObject<HTMLAnchorElement>;
   private smileyRef: RefObject<SVGSVGElement>;
 
   constructor(props: Props) {
@@ -23,13 +24,15 @@ class Aboutme extends React.Component<Props> {
     this.facebookRef = createRef();
     this.instagramRef = createRef();
     this.githubRef = createRef();
+    this.numberRef = createRef();
   }
 
-  componentDidUpdate() {
-    if (this.smileyRef.current) addAnimation(this.smileyRef.current, 'fadeIn', true, '02');
+  componentDidMount() {
+    if (this.smileyRef.current) addAnimation(this.smileyRef.current, 'fadeIn', true);
     if (this.facebookRef.current) addAnimation(this.facebookRef.current, 'fadeInUp', true);
     if (this.instagramRef.current) addAnimation(this.instagramRef.current, 'fadeInUp', true, '02');
     if (this.githubRef.current) addAnimation(this.githubRef.current, 'fadeInUp', true, '04');
+    if (this.numberRef.current) addAnimation(this.numberRef.current, 'fadeInUp', true);
   }
 
   render() {
@@ -59,7 +62,9 @@ class Aboutme extends React.Component<Props> {
             </div>
             <div className='about__contact'>
               <h3>contact</h3>
-              <a href='tel:+4915782278711'>+49 1578 2278711</a>
+              <a ref={this.numberRef} href='tel:+4915782278711'>
+                +49 1578 2278711
+              </a>
             </div>
           </section>
         </section>
