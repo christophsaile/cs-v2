@@ -19,11 +19,11 @@ class TimelineItem extends React.Component<Props> {
         <h3 className='underline' {...setScroll(true, 1)}>
           {this.props.year}
         </h3>
-        <p className='timelineItem__title'>{this.props.title}</p>
-        <p className='timelineItem__info'>{this.props.info}</p>
-        <div className='timelineItem__number'>
-          <span>{this.props.id}</span>
-        </div>
+        <p className='timelineItem__info'>
+          {this.props.title} <br />
+          <span className='highlight'>@ </span>
+          {this.props.info}
+        </p>
       </section>
     );
   }
