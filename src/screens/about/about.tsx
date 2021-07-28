@@ -34,7 +34,7 @@ class Aboutme extends React.Component<Props> {
 
   render() {
     return (
-      <main className='about' data-scroll-container>
+      <main className='page page--fullscreen about' data-scroll-container>
         <section className='about__content' data-scroll-section>
           <Link to='/' className='about__cancel'>
             <Cancel title='Cancel' />
@@ -44,17 +44,24 @@ class Aboutme extends React.Component<Props> {
               <Smiley ref={this.smileyRef} title='Email' />
             </a>
           </div>
-          <div className='about__social'>
-            <a ref={this.facebookRef} href='https://www.facebook.com/Chris.Saile'>
-              Facebook
-            </a>
-            <a ref={this.instagramRef} href='https://www.instagram.com/christophsaile/'>
-              Instagram
-            </a>
-            <a ref={this.githubRef} href='https://github.com/christophsaile'>
-              Github
-            </a>
-          </div>
+          <section className='about__wrapper'>
+            <div className='about__social'>
+              <h3>social</h3>
+              <a ref={this.facebookRef} href='https://www.facebook.com/Chris.Saile'>
+                Facebook
+              </a>
+              <a ref={this.instagramRef} href='https://www.instagram.com/christophsaile/'>
+                Instagram
+              </a>
+              <a ref={this.githubRef} href='https://github.com/christophsaile'>
+                Github
+              </a>
+            </div>
+            <div className='about__contact'>
+              <h3>contact</h3>
+              <a href='tel:+4915782278711'>+49 1578 2278711</a>
+            </div>
+          </section>
         </section>
       </main>
     );
