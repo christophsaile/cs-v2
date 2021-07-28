@@ -3,6 +3,7 @@ $white: #ffffff;
 $offwhite: #efefe6;
 $black: #000000;
 $darkblue: #14161a;
+$darkgrey: #1c1f24;
 $bluegrey: #78809e;
 
 // boxshadow
@@ -29,17 +30,18 @@ $font-family: 'PoliteType', sans-serif;
 $font-weight-normal: 400;
 
 // font-sizes
-$font-sm: 2rem;
+$font-xs: 1rem;
+$font-sm: 1.4rem;
 $font-md: 2.6rem;
-$font-lg: 4rem;
+$font-lg: 3rem;
 $font-xl: 5.2rem;
 
 // spacing
 $spacing-xs: 1rem;
 $spacing-sm: 2rem;
 $spacing-md: 4rem;
-$spacing-lg: 5rem;
-$spacing-xl: 7rem;
+$spacing-lg: 6rem;
+$spacing-xl: 8rem;
 $spacing-xxl: 20vw;
 
 // body styles
