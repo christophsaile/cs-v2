@@ -1,0 +1,14 @@
+.home {
+  .content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100%;
+    max-width: 100%;
+
+    @include breakpoint($md) {
+      flex-direction: row;
+      max-width: none;
+    }
+  }
+}

@@ -2,9 +2,10 @@
   &__icon {
     position: fixed;
     bottom: 0;
+    right: 0;
     width: 8rem;
     height: 8rem;
-    margin: 0 0 $spacing-sm $spacing-sm;
+    margin: $spacing-sm;
     border-width: 1px;
     border-radius: 100%;
     border-color: transparent;
@@ -19,6 +20,7 @@
 
     svg {
       animation: rotate 20s linear infinite;
+      fill: $white;
     }
 
     @keyframes rotate {
@@ -31,116 +33,6 @@
       width: 12rem;
       height: 12rem;
       margin: 0 0 $spacing-md $spacing-md;
-    }
-  }
-
-  &__contact {
-    display: flex;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba($color: $black, $alpha: 0.9);
-    z-index: $z-contact;
-
-    &--hidden {
-      opacity: 0;
-      visibility: hidden;
-      transition: visibility 0s 0.6s, opacity 0.6s $transition;
-    }
-
-    &--open {
-      opacity: 1;
-      visibility: visible;
-      transition: opacity 0.6s $transition;
-    }
-  }
-
-  &__content {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-width: $xl;
-    margin: auto auto 0 auto;
-    padding: $spacing-sm;
-
-    @include breakpoint($md) {
-      padding: $spacing-md;
-      padding-bottom: $spacing-md;
-    }
-  }
-
-  &__cancel {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 3rem;
-    margin: $spacing-md $spacing-md 0 0;
-    cursor: pointer;
-
-    svg {
-      fill: $white;
-    }
-  }
-
-  &__smiley {
-    width: 100%;
-    margin: auto;
-    padding-bottom: $spacing-md;
-
-    @include breakpoint($md) {
-      width: auto;
-      height: 70vh;
-      margin: 0 auto;
-    }
-
-    svg {
-      fill: $white;
-
-      @include breakpoint($md) {
-        height: 100%;
-      }
-    }
-  }
-
-  &__social {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: auto;
-
-    @include breakpoint($md) {
-      justify-content: left;
-    }
-
-    a {
-      display: inline-block;
-      width: 5rem;
-      height: 5rem;
-      margin-right: $spacing-sm;
-
-      &:first-child {
-        svg {
-          fill: $purple;
-        }
-      }
-      &:nth-child(2) {
-        svg {
-          fill: $red;
-        }
-      }
-      &:last-child {
-        margin-right: 0;
-
-        svg {
-          fill: $yellow;
-        }
-      }
-    }
-
-    svg {
-      height: 100%;
     }
   }
 }

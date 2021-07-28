@@ -1,0 +1,85 @@
+.about {
+  &__contact {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba($color: $black, $alpha: 0.9);
+    z-index: $z-contact;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: $xl;
+    margin: auto auto 0 auto;
+    padding: $spacing-sm;
+
+    @include breakpoint($md) {
+      padding: $spacing-md;
+      padding-bottom: $spacing-md;
+    }
+  }
+
+  &__cancel {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 3rem;
+    margin: $spacing-md $spacing-md 0 0;
+    cursor: pointer;
+
+    svg {
+      fill: $white;
+    }
+  }
+
+  &__smiley {
+    width: 100%;
+    margin: auto;
+    padding-bottom: $spacing-md;
+
+    @include breakpoint($md) {
+      width: auto;
+      height: 70vh;
+      margin: 0 auto;
+    }
+
+    svg {
+      fill: $white;
+
+      @include breakpoint($md) {
+        height: 100%;
+      }
+    }
+  }
+
+  &__social {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: auto;
+
+    @include breakpoint($md) {
+      justify-content: left;
+    }
+
+    a {
+      display: inline-block;
+      width: 5rem;
+      height: 5rem;
+      margin-right: $spacing-sm;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    svg {
+      height: 100%;
+    }
+  }
+}

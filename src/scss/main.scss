@@ -6,6 +6,9 @@
 /* animate */
 @import '~animate.css/animate';
 
+/* animations */
+@import './animations.scss';
+
 /* breakpoint */
 @import '~breakpoint-sass/stylesheets/breakpoint';
 
@@ -24,11 +27,15 @@
 /* global styles */
 @import './global.scss';
 
+/* screens */
+@import '../screens/about/about.scss';
+@import '../screens/home/home.scss';
+
 /* components */
 @import '../components/background/background.scss';
 @import '../components/statement/statement.scss';
 @import '../components/say-hey/say-hey.scss';
 @import '../components/button/button.scss';
 @import '../components/timeline/timeline.scss';
-@import '../components/about/about.scss';
+@import '../components/aboutme/aboutme.scss';
 @import '../components/work/work.scss';

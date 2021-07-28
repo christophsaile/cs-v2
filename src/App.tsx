@@ -1,47 +1,26 @@
-import React, { createRef, RefObject } from 'react';
+import React from 'react';
 import LocomotiveScroll from 'locomotive-scroll';
 import { isMobile, isTablet } from 'react-device-detect';
 import { debounce } from './helpers/debounce';
 import { map, clamp } from './helpers/utils';
-import { setScroll } from './helpers/setScroll';
-import { addAnimation } from './helpers/addAnimation';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 // Components
-import Statement from './components/statement/statement';
-import Timeline from './components/timeline/timeline';
-import About from './components/about/about';
-import Work from './components/work/work';
-
-// Content
-import TimelineContent from './components/timeline/timeline-data.json';
-import WorkContent from './components/work/work-data.json';
-
-// Assets
-import SayHey from './components/say-hey/say-hey';
-import ChrisCam from './assets/imgs/chris-cam.png';
+import Home from './screens/home/home';
+import About from './screens/about/about';
 
 type Props = {};
 type State = {
   isMobile: boolean;
-  isMenuOpen: boolean;
 };
 
 class App extends React.Component<Props, State> {
-  private heyYouTextRef: RefObject<HTMLElement>;
-  private heyYouImgRef: RefObject<HTMLImageElement>;
-
   constructor(props: Props) {
     super(props);
 
     this.state = {
       isMobile: this.checkScreenSize(),
-      isMenuOpen: false,
     };
-
-    this.handleMenu = this.handleMenu.bind(this);
-
-    this.heyYouTextRef = createRef();
-    this.heyYouImgRef = createRef();
   }
 
   componentDidMount() {
@@ -53,7 +32,6 @@ class App extends React.Component<Props, State> {
     );
 
     this.initLscroll();
-    if (!this.state.isMobile) this.initAnimation();
   }
 
   private handleResize = (): void => {
@@ -66,12 +44,6 @@ class App extends React.Component<Props, State> {
   private checkScreenSize = (): boolean => {
     return window.innerWidth > 768 ? false : true;
   };
-
-  private handleMenu(): void {
-    this.setState((state) => ({
-      isMenuOpen: !state.isMenuOpen,
-    }));
-  }
 
   private initLscroll = (): void => {
     const lscroll = new LocomotiveScroll({
@@ -116,66 +88,17 @@ class App extends React.Component<Props, State> {
     _lscroll.update();
   };
 
-  private initAnimation = (): void => {
-    const heyYouText = this.heyYouTextRef.current;
-    const heyYouImg = this.heyYouImgRef.current;
-    if (heyYouText) addAnimation(heyYouText, 'fadeIn', true);
-    if (heyYouImg) addAnimation(heyYouImg, 'fadeIn', true, '06');
-  };
-
   render() {
     return (
-      <main data-scroll-container>
-        <section className='content'>
-          <SayHey isMenuOpen={this.state.isMenuOpen} onMenuChange={this.handleMenu} />
-          <section className='page page--fullscreen intro' data-scroll-section>
-            <Statement>
-              <span {...setScroll(true, -2, 'vertical')} ref={this.heyYouTextRef}>
-                Hey{this.state.isMobile && <br />} You
-              </span>
-            </Statement>
-            <img
-              ref={this.heyYouImgRef}
-              className='intro__img'
-              src={ChrisCam}
-              alt='Portrait Christoph Saile'
-              {...setScroll(true, 2, 'vertical')}
-            />
-          </section>
-          <section className='page' data-scroll-section>
-            <Statement>
-              <span {...setScroll(true, -4, 'vertical')}>Àpropos</span>
-            </Statement>
-          </section>
-          <section className='page' data-scroll-section>
-            <About onMenuChange={this.handleMenu} />
-          </section>
-          <section className='page' data-scroll-section>
-            <Timeline data={TimelineContent} />
-          </section>
-          <section className='page' data-scroll-section>
-            <Statement center={true}>
-              <span {...setScroll(true, 4, 'vertical')}>
-                Scroll <br />
-                Further
-              </span>
-            </Statement>
-          </section>
-          <section className='page' data-scroll-section>
-            <Statement>
-              <span {...setScroll(true, -4, 'vertical')}>Créations</span>
-            </Statement>
-          </section>
-          <section className='page' data-scroll-section>
-            <Work data={WorkContent} />
-          </section>
-          <section className='page' data-scroll-section>
-            <Statement center={true}>
-              <span {...setScroll(true)}>Thanks!</span>
-            </Statement>
-          </section>
-        </section>
-      </main>
+      <Router>
+        <Link to='/' className='logo'>
+          chris
+        </Link>
+        <Switch>
+          <Route exact path='/' component={Home} />
+          <Route path='/about' component={About} />
+        </Switch>
+      </Router>
     );
   }
 }

@@ -1,13 +1,14 @@
-.animate__delay-02s {
-  animation-delay: calc(var(--animate-delay) * 0.2);
-}
+.logo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 2rem;
+  text-decoration: none;
+  color: $white;
 
-.animate__delay-04s {
-  animation-delay: calc(var(--animate-delay) * 0.4);
-}
-
-.animate__delay-06s {
-  animation-delay: calc(var(--animate-delay) * 0.6);
+  :hover {
+    text-decoration: underline;
+  }
 }
 
 .page {
@@ -40,19 +41,6 @@
   }
 }
 
-.content {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  height: 100%;
-  max-width: 100%;
-
-  @include breakpoint($md) {
-    flex-direction: row;
-    max-width: none;
-  }
-}
-
 .background {
   position: absolute;
   left: 0;
@@ -61,48 +49,6 @@
   width: 100%;
 }
 
-.intro {
-  .statement__container {
-    .statement__title {
-      @include breakpoint($max-md) {
-        margin: 0 auto;
-        white-space: normal;
-        font-size: 15rem;
-      }
-    }
-  }
-
-  &__img {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: 0 auto;
-    padding-bottom: $spacing-sm;
-    height: 60vh;
-    max-width: 100%;
-
-    @include breakpoint($max-md) {
-      &[data-scroll] {
-        opacity: 0;
-        transform: translateY(6rem);
-        transition: 0.6s $transition;
-      }
-
-      &.is-inview {
-        opacity: 1;
-        transform: none;
-        transition-delay: 0.2s;
-      }
-    }
-
-    @include breakpoint($md) {
-      top: 0;
-      bottom: 0;
-      padding: 0;
-      max-width: none;
-      height: calc(100% - 8rem);
-      max-height: 1000px;
-    }
-  }
+.highlight {
+  color: $bluegrey;
 }

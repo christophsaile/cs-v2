@@ -1,5 +1,6 @@
-.about {
+.aboutme {
   display: flex;
+  padding-left: $spacing-md;
 
   @include breakpoint($md) {
     width: 55rem;
@@ -11,30 +12,28 @@
   }
 
   &:hover {
-    .underline {
-      &::after {
-        width: 100%;
-      }
+    .highlight {
+      color: $bluegrey;
     }
   }
 
   &__content {
     position: relative;
     margin: auto;
-    padding-top: $spacing-md;
+    padding-bottom: $spacing-sm;
 
     @include breakpoint($lg) {
-      padding-top: $spacing-xl;
+      padding-bottom: $spacing-xl;
     }
   }
 
   &__stroke {
     position: absolute;
-    top: 0;
-    left: 0;
     right: 0;
-    height: 0.4rem;
-    background-color: $black;
+    bottom: 0;
+    left: 0;
+    height: 0.2rem;
+    background-color: $bluegrey;
   }
 
   h3 {
@@ -52,6 +51,8 @@
   }
 
   p {
+    padding-bottom: $spacing-sm;
+
     @include breakpoint($max-md) {
       &[data-scroll] {
         opacity: 0;
@@ -68,22 +69,18 @@
       }
     }
 
-    &:first-of-type {
-      padding-bottom: 2rem;
+    &:last-of-type {
+      padding-bottom: 0;
     }
   }
 
-  .underline {
+  .highlight {
     cursor: pointer;
+    color: $white;
+    transition: 0.2s $transition;
 
-    @include breakpoint($max-md) {
-      &::after {
-        width: 100%;
-      }
-    }
-
-    &:hover::after {
-      width: 100%;
+    &:hover {
+      color: $bluegrey;
     }
   }
 }
