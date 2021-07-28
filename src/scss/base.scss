@@ -26,15 +26,13 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: $font-family-windsor;
-  font-weight: $font-weight-normal;
   white-space: normal;
 }
 
 h3 {
   font-size: $font-lg;
   white-space: normal;
-  padding-bottom: $spacing-md;
+  padding-bottom: $spacing-xs;
 
   @include breakpoint($lg) {
     font-size: $font-xl;
@@ -44,6 +42,7 @@ h3 {
 
 p {
   font-size: $font-sm;
+  line-height: 2;
   white-space: normal;
 
   @include breakpoint($lg) {
@@ -53,7 +52,12 @@ p {
 
 a {
   font-size: $font-sm;
+  line-height: 2;
   white-space: normal;
+  color: $white;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.3rem;
 
   @include breakpoint($lg) {
     font-size: $font-md;

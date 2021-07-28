@@ -1,10 +1,7 @@
 .workItem {
   position: relative;
   width: 100%;
-  margin-top: $spacing-xl;
-  padding: $spacing-sm;
-  padding-bottom: $spacing-xl;
-  background-color: $white;
+  margin-bottom: $spacing-lg;
   box-shadow: $boxshadow;
 
   @include breakpoint($md) {
@@ -39,37 +36,20 @@
     padding: $spacing-md $spacing-md 8rem;
   }
 
+  &__meta {
+    margin-bottom: $spacing-sm;
+
+    span {
+      margin-right: $spacing-xs;
+      text-transform: uppercase;
+      letter-spacing: 0.3rem;
+    }
+  }
+
   &__explore {
-    position: absolute;
-    bottom: -4.5rem;
-    left: 0;
-    right: 0;
-    display: flex;
-    width: 9rem;
-    height: 9rem;
-    margin: auto;
-    border-radius: 100%;
-    font-size: $font-lg;
-    font-family: $font-family-windsor;
-    background-color: $black;
-    color: $white;
-    cursor: pointer;
-
-    @include breakpoint($md) {
-      left: -5.5rem;
-      right: auto;
-    }
-
-    @include breakpoint($lg) {
-      width: 12rem;
-      height: 12rem;
-      font-size: $font-xl;
-    }
-
+    margin-top: $spacing-xs;
     a {
-      margin: auto;
-      color: $white;
-      text-decoration: none;
+      font-size: $font-xs;
     }
   }
 }

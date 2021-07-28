@@ -1,10 +1,10 @@
 import React from 'react';
 import WorkItem from './work-item/work-item';
-import Background from '../background/background';
 
 type Content = {
   id: number;
   title: string;
+  meta: string[];
   link: string;
   description: string;
 };
@@ -21,10 +21,15 @@ class Work extends React.Component<Props> {
   render() {
     return (
       <section className='work'>
-        <Background section='work' items={5} form={'triangle'} />
         <div className='work__content'>
           {this.props.data.map((_item: Content) => (
-            <WorkItem key={_item.id} id={_item.id} title={_item.title} link={_item.link}>
+            <WorkItem
+              key={_item.id}
+              id={_item.id}
+              title={_item.title}
+              meta={_item.meta}
+              link={_item.link}
+            >
               <p dangerouslySetInnerHTML={this.createMarkup(_item.description)} />
             </WorkItem>
           ))}
