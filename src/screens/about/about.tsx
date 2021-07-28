@@ -6,7 +6,9 @@ import { Link } from 'react-router-dom';
 import { ReactComponent as Smiley } from '../../assets/imgs/smiley.svg';
 import { ReactComponent as Cancel } from '../../assets/imgs/cancel.svg';
 
-type Props = {};
+type Props = {
+  isMobile: boolean;
+};
 
 class Aboutme extends React.Component<Props> {
   private facebookRef: RefObject<HTMLAnchorElement>;
