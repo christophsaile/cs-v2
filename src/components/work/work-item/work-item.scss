@@ -48,8 +48,18 @@
 
   &__explore {
     margin-top: $spacing-xs;
+
     a {
-      font-size: $font-xs;
+      transition: 0.6s $transition;
+
+      &::after {
+        content: '\203A';
+        color: $bluegrey;
+      }
+
+      &:hover {
+        color: $bluegrey;
+      }
     }
   }
 }

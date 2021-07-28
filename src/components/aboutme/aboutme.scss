@@ -78,6 +78,12 @@
     cursor: pointer;
     color: $white;
     transition: 0.2s $transition;
+    padding-left: 0.1rem;
+
+    &::after {
+      content: '\203A';
+      color: $bluegrey;
+    }
 
     &:hover {
       color: $bluegrey;

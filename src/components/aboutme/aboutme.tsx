@@ -18,7 +18,7 @@ class Aboutme extends React.Component<Props> {
           <p {...setScroll(true)}>
             Feel free to{' '}
             <Link to='/about' className='highlight'>
-              drop me a line!
+              drop me a line
             </Link>
           </p>
           <span className='aboutme__stroke'></span>
