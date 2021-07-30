@@ -15,7 +15,7 @@ class Aboutme extends React.Component<Props> {
             Besides Frontend Development I am interested in UI-Design, 3D-Animations and
             Photography.
           </p>
-          <p {...setScroll(true)}>
+          <p>
             Feel free to{' '}
             <Link to='/about' className='highlight'>
               drop me a line
