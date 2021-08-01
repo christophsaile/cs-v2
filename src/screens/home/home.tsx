@@ -74,7 +74,7 @@ class Home extends React.Component<Props> {
           <SayHey />
           <div className='gradient' />
           <section className='page page--fullscreen intro' data-scroll-section>
-            <Statement>
+            <Statement intro={true}>
               <span {...setScroll(true, -2, 'vertical')}>
                 hi, i am chris, a web-developer from germany. i am happy to see you here.
               </span>
