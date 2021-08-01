@@ -17,7 +17,7 @@ class SayHey extends React.Component<Props> {
   }
 
   componentDidMount() {
-    if (this.sayHeyRef.current) addAnimation(this.sayHeyRef.current, 'fadeInRight', true, '18');
+    if (this.sayHeyRef.current) addAnimation(this.sayHeyRef.current, 'fadeInRight', true, '12');
   }
 
   render() {

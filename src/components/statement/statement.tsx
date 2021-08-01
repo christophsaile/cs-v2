@@ -17,7 +17,7 @@ class Statement extends React.Component<Props> {
 
   componentDidMount() {
     if (this.props.intro) {
-      if (this.containerRef.current) addAnimation(this.containerRef.current, 'fadeIn', true, '14');
+      if (this.containerRef.current) addAnimation(this.containerRef.current, 'fadeIn', true, '02');
     }
   }
 

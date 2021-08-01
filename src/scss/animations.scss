@@ -18,8 +18,16 @@
   animation-delay: calc(var(--animate-delay) * 1);
 }
 
+.animate__delay-12s {
+  animation-delay: calc(var(--animate-delay) * 1.2);
+}
+
 .animate__delay-14s {
   animation-delay: calc(var(--animate-delay) * 1.4);
+}
+
+.animate__delay-16s {
+  animation-delay: calc(var(--animate-delay) * 1.6);
 }
 
 .animate__delay-18s {

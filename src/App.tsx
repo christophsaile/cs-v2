@@ -63,8 +63,8 @@ class App extends React.Component<Props, State> {
   };
 
   private initAnimation = (): void => {
-    if (this.canvasRef.current) addAnimation(this.canvasRef.current, 'fadeIn', true, '04');
-    if (this.logoRef.current) addAnimation(this.logoRef.current, 'fadeInLeft', true, '18');
+    if (this.canvasRef.current) addAnimation(this.canvasRef.current, 'fadeIn', true, '02');
+    if (this.logoRef.current) addAnimation(this.logoRef.current, 'fadeInLeft', true, '12');
   };
 
   render() {
