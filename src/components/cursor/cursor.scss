@@ -1,0 +1,19 @@
+body {
+  cursor: none;
+}
+
+.cursor {
+  pointer-events: none;
+
+  &__ball {
+    position: fixed;
+    top: -10rem;
+    left: -10rem;
+    mix-blend-mode: difference;
+    z-index: $z-cursor;
+
+    circle {
+      fill: #f7f8fa;
+    }
+  }
+}

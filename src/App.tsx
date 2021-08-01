@@ -8,6 +8,7 @@ import { addAnimation } from './helpers/addAnimation';
 import Home from './screens/home/home';
 import About from './screens/about/about';
 import Sphere from './webgl/sphere';
+import Cursor from './components/cursor/cursor';
 
 type Props = {};
 type State = {
@@ -84,7 +85,8 @@ class App extends React.Component<Props, State> {
           <Route exact path='/' render={() => <Home isMobile={this.state.isMobile} />} />
           <Route path='/about' render={() => <About isMobile={this.state.isMobile} />} />
         </Switch>
-        <div className='animate__slower' ref={this.canvasRef} />
+        <div className='sphere animate__slower' ref={this.canvasRef} />
+        {!isMobile && <Cursor />}
       </Router>
     );
   }
