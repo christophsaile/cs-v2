@@ -78,7 +78,6 @@ class Home extends React.Component<Props> {
               <span {...setScroll(true, -2, 'vertical')}>
                 hi, i am chris, a web-developer from germany. i am happy to see you here.
               </span>
-              {/* placeholder image */}
             </Statement>
           </section>
           <section className='page' data-scroll-section>

@@ -4,14 +4,17 @@
   margin-bottom: $spacing-lg;
   box-shadow: $boxshadow;
 
-  @include breakpoint($md) {
-    margin-top: $spacing-md;
+  @include breakpoint($max-md) {
+    > * {
+      opacity: 0;
+      transition: 0.6s $transition;
+    }
   }
 
   @include breakpoint($md) {
     width: 40rem;
     margin-right: 25rem;
-    margin-top: 0;
+    margin-top: $spacing-md;
     padding: $spacing-sm $spacing-sm 4rem;
 
     &:first-child {
@@ -26,6 +29,28 @@
   @include breakpoint($lg) {
     width: 45rem;
     padding: $spacing-md $spacing-md 8rem;
+  }
+
+  &.is-inview {
+    > * {
+      opacity: 1;
+    }
+
+    :first-child {
+      transition-delay: 0.2s;
+    }
+
+    :nth-child(2) {
+      transition-delay: 0.3s;
+    }
+
+    :nth-child(3) {
+      transition-delay: 0.4s;
+    }
+
+    :nth-child(4) {
+      transition-delay: 0.5s;
+    }
   }
 
   &__meta {
