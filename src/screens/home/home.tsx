@@ -72,6 +72,7 @@ class Home extends React.Component<Props> {
       <main className='home' data-scroll-container>
         <section className='content'>
           <SayHey />
+          <div className='gradient' />
           <section className='page page--fullscreen intro' data-scroll-section>
             <Statement>
               <span {...setScroll(true, -2, 'vertical')}>
