@@ -34,7 +34,7 @@ class Sphere {
     uFrequency: 1.2,
     uAmplitude: 1.2,
     uDensity: 1.3,
-    uStrength: 1.3,
+    uStrength: 1.1,
     // fragment
     uOpacity: 0.9,
   };
@@ -73,12 +73,6 @@ class Sphere {
   };
 
   public addEventListeners = () => {
-    window.addEventListener(
-      'resize',
-      debounce(() => {
-        this.onResize();
-      }, 250)
-    );
     window.addEventListener(
       'mousemove',
       debounce((event: MouseEvent) => {
