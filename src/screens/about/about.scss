@@ -47,13 +47,20 @@
   &__wrapper {
     display: flex;
     flex-direction: row;
-    padding-bottom: 10vh;
+    padding-bottom: $spacing-lg;
   }
 
   &__social {
     display: flex;
     flex-direction: column;
     width: 50%;
+
+    a {
+      padding-bottom: 0.5rem;
+      &:last-child {
+        padding: 0;
+      }
+    }
   }
 
   &__contact {
