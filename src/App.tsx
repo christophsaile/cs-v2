@@ -1,4 +1,4 @@
-import React, { createRef, RefObject } from 'react';
+import React, { createRef, RefObject, Suspense } from 'react';
 import { isMobile, isTablet } from 'react-device-detect';
 import { debounce } from './helpers/debounce';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
@@ -67,10 +67,12 @@ class App extends React.Component<Props, State> {
         >
           chris
         </Link>
-        <Switch>
-          <Route exact path='/' render={() => <Home isMobile={this.state.isMobile} />} />
-          <Route path='/about' render={() => <About isMobile={this.state.isMobile} />} />
-        </Switch>
+        <Suspense fallback={<div></div>}>
+          <Switch>
+            <Route exact path='/' render={() => <Home isMobile={this.state.isMobile} />} />
+            <Route path='/about' render={() => <About isMobile={this.state.isMobile} />} />
+          </Switch>
+        </Suspense>
         {!isMobile && <Cursor />}
       </Router>
     );
