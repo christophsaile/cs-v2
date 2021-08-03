@@ -5,9 +5,9 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import { addAnimation } from './helpers/addAnimation';
 
 // Components
-import Home from './screens/home/home';
-import About from './screens/about/about';
 import Cursor from './components/cursor/cursor';
+const Home = React.lazy(() => import('./screens/home/home'));
+const About = React.lazy(() => import('./screens/about/about'));
 
 type Props = {};
 type State = {
