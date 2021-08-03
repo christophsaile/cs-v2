@@ -2,7 +2,10 @@ import React, { createRef, RefObject } from 'react';
 import { addAnimation } from '../../helpers/addAnimation';
 import { Link } from 'react-router-dom';
 
-//Assets
+// Components
+import Background from '../../components/background/background';
+
+// Assets
 import { ReactComponent as Smiley } from '../../assets/imgs/smiley.svg';
 import { ReactComponent as Cancel } from '../../assets/imgs/cancel.svg';
 
@@ -68,6 +71,16 @@ class Aboutme extends React.Component<Props> {
             </div>
           </section>
         </section>
+        <Background
+          id='about'
+          settings={{
+            uFrequency: 1.2,
+            uAmplitude: 1.2,
+            uDensity: 1.3,
+            uStrength: 1.1,
+            uOpacity: 0.9,
+          }}
+        />
       </main>
     );
   }

@@ -7,7 +7,6 @@ import { addAnimation } from './helpers/addAnimation';
 // Components
 import Home from './screens/home/home';
 import About from './screens/about/about';
-import Sphere from './webgl/sphere';
 import Cursor from './components/cursor/cursor';
 
 type Props = {};
@@ -16,7 +15,6 @@ type State = {
 };
 
 class App extends React.Component<Props, State> {
-  private canvasRef: RefObject<HTMLDivElement>;
   private logoRef: RefObject<HTMLAnchorElement>;
 
   constructor(props: Props) {
@@ -26,13 +24,11 @@ class App extends React.Component<Props, State> {
       isMobile: this.checkScreenSize(),
     };
 
-    this.canvasRef = createRef();
     this.logoRef = createRef();
   }
 
   componentDidMount() {
     this.handleResize();
-    this.initSphere();
     this.initAnimation();
   }
 
@@ -54,17 +50,7 @@ class App extends React.Component<Props, State> {
     return window.innerWidth > 768 ? false : true;
   };
 
-  private initSphere = (): void => {
-    Sphere.addCanvas(this.canvasRef.current);
-    Sphere.addCamera();
-    Sphere.addMesh();
-    Sphere.addEventListeners();
-    Sphere.onResize();
-    Sphere.update();
-  };
-
   private initAnimation = (): void => {
-    if (this.canvasRef.current) addAnimation(this.canvasRef.current, 'fadeIn', true, '02');
     if (this.logoRef.current) addAnimation(this.logoRef.current, 'fadeInLeft', true, '12');
   };
 
@@ -85,7 +71,6 @@ class App extends React.Component<Props, State> {
           <Route exact path='/' render={() => <Home isMobile={this.state.isMobile} />} />
           <Route path='/about' render={() => <About isMobile={this.state.isMobile} />} />
         </Switch>
-        <div className='sphere animate__slower' ref={this.canvasRef} />
         {!isMobile && <Cursor />}
       </Router>
     );

@@ -8,6 +8,7 @@ import Statement from '../../components/statement/statement';
 import Timeline from '../../components/timeline/timeline';
 import About from '../../components/aboutme/aboutme';
 import Work from '../../components/work/work';
+import Background from '../../components/background/background';
 
 // Content
 import TimelineContent from '../../components/timeline/timeline-data.json';
@@ -71,14 +72,26 @@ class Home extends React.Component<Props> {
     return (
       <main className='home' data-scroll-container>
         <section className='content'>
-          <SayHey />
-          <div className='gradient' />
+          <div className='fixed'>
+            <SayHey />
+            <div className='gradient' />
+          </div>
           <section className='page page--fullscreen intro' data-scroll-section>
             <Statement intro={true}>
               <span {...setScroll(true, -2, 'vertical')}>
                 hi, i am chris, a web-developer from germany. i am happy to see you here.
               </span>
             </Statement>
+            <Background
+              id='intro'
+              settings={{
+                uFrequency: 1.2,
+                uAmplitude: 1.2,
+                uDensity: 1.3,
+                uStrength: 1.1,
+                uOpacity: 0.9,
+              }}
+            />
           </section>
           <section className='page' data-scroll-section>
             <About />
@@ -90,6 +103,16 @@ class Home extends React.Component<Props> {
             <Statement>
               <span {...setScroll(true, -4, 'vertical')}>créations</span>
             </Statement>
+            <Background
+              id='creation'
+              settings={{
+                uFrequency: 1.4,
+                uAmplitude: 1.9,
+                uDensity: 1.3,
+                uStrength: 1.4,
+                uOpacity: 0.9,
+              }}
+            />
           </section>
           <section className='page' data-scroll-section>
             <Work data={WorkContent} />
@@ -98,6 +121,16 @@ class Home extends React.Component<Props> {
             <Statement center={true}>
               <span {...setScroll(true)}>thanks for your interest in me, have a nice day.</span>
             </Statement>
+            <Background
+              id='end'
+              settings={{
+                uFrequency: 0.9,
+                uAmplitude: 1.3,
+                uDensity: 1.4,
+                uStrength: 1.0,
+                uOpacity: 0.9,
+              }}
+            />
           </section>
         </section>
       </main>
