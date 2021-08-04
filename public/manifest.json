@@ -4,8 +4,8 @@
   "display": "standalone",
   "start_url": "./",
   "scope": ".",
-  "name": "Portfolio of Christoph Saile",
-  "short_name": "Christoph Saile",
+  "name": "Christoph Saile",
+  "short_name": "Chris",
   "icons": [
     {
       "src": "favicon.ico",
