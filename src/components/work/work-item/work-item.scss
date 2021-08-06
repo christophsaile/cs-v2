@@ -13,22 +13,12 @@
 
   @include breakpoint($md) {
     width: 40rem;
-    margin-right: 25rem;
-    margin-top: $spacing-md;
-    padding: $spacing-sm $spacing-sm 4rem;
-
-    &:first-child {
-      margin-top: 0;
-    }
+    margin-right: 20vw;
+    margin-bottom: 0;
 
     &:last-child {
       margin-right: 0;
     }
-  }
-
-  @include breakpoint($lg) {
-    width: 45rem;
-    padding: $spacing-md $spacing-md 8rem;
   }
 
   &.is-inview {

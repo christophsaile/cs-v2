@@ -70,70 +70,72 @@ class Home extends React.Component<Props> {
 
   render() {
     return (
-      <main className='home' data-scroll-container>
-        <section className='content'>
-          <div className='fixed'>
-            <SayHey />
-            <div className='gradient' />
-          </div>
-          <section className='page page--fullscreen intro' data-scroll-section>
-            <Statement intro={true}>
-              <span {...setScroll(true, -2, 'vertical')}>
-                hi, i am chris, a web-developer from germany. i am happy to see you here.
-              </span>
-            </Statement>
-            <Background
-              id='intro'
-              settings={{
-                uFrequency: 1.2,
-                uAmplitude: 1.2,
-                uDensity: 1.3,
-                uStrength: 1.1,
-                uOpacity: 0.9,
-              }}
-            />
+      <>
+        <div className='fixed'>
+          <SayHey />
+          {this.props.isMobile && <div className='gradient' />}
+        </div>
+        <main className='home' data-scroll-container data-scroll-section>
+          <section className='content'>
+            <section className='page intro'>
+              <Statement intro={true}>
+                <span>
+                  hi, i am chris, a web-developer from germany. i am happy to see you here.
+                </span>
+              </Statement>
+              <Background
+                id='intro'
+                settings={{
+                  uFrequency: 1.2,
+                  uAmplitude: 1.2,
+                  uDensity: 1.3,
+                  uStrength: 1.1,
+                  uOpacity: 0.9,
+                }}
+              />
+            </section>
+            <section className='page'>
+              <About />
+            </section>
+            <section className='page'>
+              <Timeline data={TimelineContent} />
+            </section>
+            <section className='page'>
+              <Statement>
+                <span>créations</span>
+              </Statement>
+              <Background
+                id='creation'
+                settings={{
+                  uFrequency: 1.4,
+                  uAmplitude: 1.9,
+                  uDensity: 1.3,
+                  uStrength: 1.4,
+                  uOpacity: 0.9,
+                }}
+              />
+            </section>
+            <section className='page'>
+              <Work data={WorkContent} />
+            </section>
+            <section className='page'>
+              <Statement>
+                <span>thanks for your interest in me, have a nice day.</span>
+              </Statement>
+              <Background
+                id='end'
+                settings={{
+                  uFrequency: 0.9,
+                  uAmplitude: 1.3,
+                  uDensity: 1.4,
+                  uStrength: 1.0,
+                  uOpacity: 0.9,
+                }}
+              />
+            </section>
           </section>
-          <section className='page' data-scroll-section>
-            <About />
-          </section>
-          <section className='page' data-scroll-section>
-            <Timeline data={TimelineContent} />
-          </section>
-          <section className='page page--fullscreen' data-scroll-section>
-            <Statement>
-              <span {...setScroll(true, -4, 'vertical')}>créations</span>
-            </Statement>
-            <Background
-              id='creation'
-              settings={{
-                uFrequency: 1.4,
-                uAmplitude: 1.9,
-                uDensity: 1.3,
-                uStrength: 1.4,
-                uOpacity: 0.9,
-              }}
-            />
-          </section>
-          <section className='page' data-scroll-section>
-            <Work data={WorkContent} />
-          </section>
-          <section className='page' data-scroll-section>
-            <Statement center={true}>
-              <span {...setScroll(true)}>thanks for your interest in me, have a nice day.</span>
-            </Statement>
-            <Background
-              id='end'
-              settings={{
-                uFrequency: 0.9,
-                uAmplitude: 1.3,
-                uDensity: 1.4,
-                uStrength: 1.0,
-                uOpacity: 0.9,
-              }}
-            />
-          </section>
-        </section>
-      </main>
+        </main>
+      </>
     );
   }
 }

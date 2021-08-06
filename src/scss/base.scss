@@ -36,7 +36,6 @@ h3 {
 
   @include breakpoint($lg) {
     font-size: $font-xl;
-    padding-bottom: $spacing-xl;
   }
 }
 

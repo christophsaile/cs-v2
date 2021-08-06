@@ -11,14 +11,9 @@
 
   @include breakpoint($md) {
     width: 35rem;
-    margin-right: 25rem;
+    margin-right: 15vw;
+    margin-bottom: 0;
     padding: $spacing-sm;
-  }
-
-  @include breakpoint($lg) {
-    width: 40rem;
-    padding: $spacing-md;
-    padding-bottom: 12rem;
   }
 
   &:last-child {

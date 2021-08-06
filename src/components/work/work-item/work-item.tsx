@@ -14,9 +14,9 @@ class WorkItem extends React.Component<Props> {
     return (
       <article
         className='workItem animationItem'
-        {...setScroll(true, isEven(this.props.id) ? -2 : 2, 'vertical')}
+        {...setScroll(true, isEven(this.props.id) ? -1 : 1, 'vertical')}
       >
-        <h3 {...setScroll(true, 1)}>{this.props.title}</h3>
+        <h3>{this.props.title}</h3>
         <div className='workItem__meta'>
           {this.props.meta.map((_item: string, _index: number) => (
             <span key={_index}>{_item}</span>

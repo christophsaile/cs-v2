@@ -3,12 +3,8 @@
   padding-left: $spacing-md;
 
   @include breakpoint($md) {
-    width: 55rem;
+    width: 40rem;
     height: 100%;
-  }
-
-  @include breakpoint($lg) {
-    width: 65rem;
   }
 
   &:hover {
@@ -21,10 +17,6 @@
     position: relative;
     margin: auto;
     padding-bottom: $spacing-sm;
-
-    @include breakpoint($lg) {
-      padding-bottom: $spacing-xl;
-    }
   }
 
   &__stroke {

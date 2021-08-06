@@ -20,6 +20,7 @@
 
     @include breakpoint($md) {
       padding: 0;
+      flex-direction: row;
     }
   }
 

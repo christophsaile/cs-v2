@@ -14,11 +14,9 @@ class TimelineItem extends React.Component<Props> {
     return (
       <section
         className='timelineItem animationItem'
-        {...setScroll(true, isEven(this.props.id) ? -2 : 2, 'vertical')}
+        {...setScroll(true, isEven(this.props.id) ? 1 : -1, 'vertical')}
       >
-        <h3 className='underline' {...setScroll(true, 1)}>
-          {this.props.year}
-        </h3>
+        <h3>{this.props.year}</h3>
         <p className='timelineItem__info' {...setScroll(true)}>
           {this.props.title} <br />
           <span className='highlight'>@ </span>
