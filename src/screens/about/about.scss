@@ -4,11 +4,12 @@
     flex-direction: column;
     width: 100%;
     height: 100%;
-    max-width: $xl;
+    margin: auto;
 
     @include breakpoint($md) {
       padding: $spacing-md;
       padding-bottom: $spacing-md;
+      height: 100vh;
     }
   }
 
@@ -19,6 +20,10 @@
     width: 2rem;
     margin: $spacing-sm;
     cursor: pointer;
+
+    @include breakpoint($md) {
+      margin: $spacing-md;
+    }
 
     svg {
       fill: $white;
@@ -31,8 +36,8 @@
 
     @include breakpoint($md) {
       width: auto;
-      height: 70vh;
-      margin: 0 auto;
+      height: 50vh;
+      margin-bottom: auto;
     }
 
     svg {
@@ -48,12 +53,22 @@
     display: flex;
     flex-direction: row;
     padding-bottom: $spacing-lg;
+
+    @include breakpoint($md) {
+      padding-bottom: 0;
+      margin-top: auto;
+    }
   }
 
   &__social {
     display: flex;
     flex-direction: column;
     width: 50%;
+
+    @include breakpoint($md) {
+      width: auto;
+      margin-right: $spacing-md;
+    }
 
     a {
       padding-bottom: 0.5rem;

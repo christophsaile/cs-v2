@@ -1,5 +1,4 @@
 import React from 'react';
-import { setScroll } from '../../helpers/setScroll';
 import { map, clamp } from '../../helpers/utils';
 import LocomotiveScroll from 'locomotive-scroll';
 

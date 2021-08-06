@@ -7,7 +7,11 @@
   color: $white;
   z-index: $z-logo;
 
-  :hover {
+  @include breakpoint($md) {
+    padding: $spacing-md;
+  }
+
+  &:hover {
     text-decoration: underline;
   }
 }
@@ -29,6 +33,10 @@
       margin: 0;
       height: auto;
     }
+  }
+
+  &.about {
+    margin-right: 0;
   }
 }
 
