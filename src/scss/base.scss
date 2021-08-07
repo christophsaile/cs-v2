@@ -57,6 +57,7 @@ a {
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 0.3rem;
+  cursor: none;
 
   @include breakpoint($lg) {
     font-size: $font-md;

@@ -19,7 +19,6 @@
     right: 0;
     width: 2rem;
     margin: $spacing-sm;
-    cursor: pointer;
 
     @include breakpoint($md) {
       margin: $spacing-md;

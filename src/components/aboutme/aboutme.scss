@@ -5,6 +5,7 @@
   @include breakpoint($md) {
     width: 40rem;
     height: 100%;
+    margin-right: 20vw;
   }
 
   &:hover {

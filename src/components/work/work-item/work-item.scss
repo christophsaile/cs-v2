@@ -13,7 +13,7 @@
 
   @include breakpoint($md) {
     width: 40rem;
-    margin-right: 20vw;
+    margin-right: 10vw;
     margin-bottom: 0;
 
     &:last-child {

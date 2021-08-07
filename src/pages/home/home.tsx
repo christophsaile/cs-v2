@@ -101,7 +101,7 @@ class Home extends React.Component<Props> {
             </section>
             <section className='page'>
               <Statement>
-                <span>créations</span>
+                <span>check out some of the projects i did in the past</span>
               </Statement>
               <Background
                 id='creation'
