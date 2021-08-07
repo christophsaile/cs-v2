@@ -1,13 +1,13 @@
 import React, { createRef, RefObject, Suspense } from 'react';
 import { isMobile, isTablet } from 'react-device-detect';
-import { debounce } from './helpers/debounce';
+import { debounce } from '../helpers/debounce';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import { addAnimation } from './helpers/addAnimation';
+import { addAnimation } from '../helpers/addAnimation';
 
 // Components
-import Cursor from './components/cursor/cursor';
-const Home = React.lazy(() => import('./screens/home/home'));
-const About = React.lazy(() => import('./screens/about/about'));
+import Cursor from '../components/cursor/cursor';
+const Home = React.lazy(() => import('./home/home'));
+const About = React.lazy(() => import('./about/about'));
 
 type Props = {};
 type State = {

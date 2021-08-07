@@ -6,8 +6,8 @@ import { Link } from 'react-router-dom';
 import Background from '../../components/background/background';
 
 // Assets
-import { ReactComponent as Smiley } from '../../assets/imgs/smiley.svg';
-import { ReactComponent as Cancel } from '../../assets/imgs/cancel.svg';
+import { ReactComponent as Smiley } from '../../images/smiley.svg';
+import { ReactComponent as Cancel } from '../../images/cancel.svg';
 
 type Props = {
   isMobile: boolean;

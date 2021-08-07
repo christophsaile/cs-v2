@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { addAnimation } from '../../helpers/addAnimation';
 
 //Assets
-import { ReactComponent as SayHeySvg } from '../../assets/imgs/say-hey.svg';
+import { ReactComponent as SayHeySvg } from '../../images/say-hey.svg';
 
 type Props = {};
 
