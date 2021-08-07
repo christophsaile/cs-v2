@@ -40,8 +40,8 @@ class Aboutme extends React.Component<Props> {
 
   render() {
     return (
-      <main className='about page page--fullscreen' data-scroll-container>
-        <section className='about__content' data-scroll-section>
+      <main className='about page' data-scroll-container data-scroll-section>
+        <section className='about__content'>
           <Link to='/' className='about__cancel'>
             <Cancel title='Cancel' />
           </Link>
