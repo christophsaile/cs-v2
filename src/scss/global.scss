@@ -1,18 +1,16 @@
 .logo {
-  position: fixed;
-  top: 0;
-  left: 0;
-  padding: 2rem;
+  display: block;
+  position: fixed !important;
+  top: $spacing-sm;
+  left: $spacing-sm;
   text-decoration: none;
   color: $white;
+  font-size: $font-md;
   z-index: $z-logo;
 
-  @include breakpoint($md) {
-    padding: $spacing-md;
-  }
-
-  &:hover {
-    text-decoration: underline;
+  @include breakpoint($xl) {
+    top: $spacing-md;
+    left: $spacing-md;
   }
 }
 

@@ -69,10 +69,15 @@
       margin-right: $spacing-md;
     }
 
-    a {
-      padding-bottom: 0.5rem;
+    ul {
+      list-style: none;
+    }
+
+    li {
+      margin-bottom: $spacing-sm;
+
       &:last-child {
-        padding: 0;
+        margin: 0;
       }
     }
   }
@@ -81,5 +86,10 @@
     display: flex;
     flex-direction: column;
     width: 50%;
+  }
+
+  a {
+    display: block;
+    font-size: $font-md;
   }
 }

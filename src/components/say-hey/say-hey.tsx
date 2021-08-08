@@ -23,7 +23,7 @@ class SayHey extends React.Component<Props> {
   render() {
     return (
       <section className='sayHey__container'>
-        <Link ref={this.sayHeyRef} to='/about' className='sayHey__icon'>
+        <Link ref={this.sayHeyRef} to='/about' className='sayHey__icon upper'>
           <SayHeySvg title='Say Hey Icon' />
         </Link>
       </section>

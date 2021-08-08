@@ -53,19 +53,39 @@ class Aboutme extends React.Component<Props> {
           <section className='about__wrapper'>
             <div className='about__social'>
               <h3>social</h3>
-              <a ref={this.facebookRef} href='https://www.facebook.com/Chris.Saile'>
-                Facebook
-              </a>
-              <a ref={this.instagramRef} href='https://www.instagram.com/christophsaile/'>
-                Instagram
-              </a>
-              <a ref={this.githubRef} href='https://github.com/christophsaile'>
-                Github
-              </a>
+              <ul>
+                <li>
+                  <a
+                    className='styled'
+                    ref={this.facebookRef}
+                    href='https://www.facebook.com/Chris.Saile'
+                  >
+                    Facebook
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className='styled'
+                    ref={this.instagramRef}
+                    href='https://www.instagram.com/christophsaile/'
+                  >
+                    Instagram
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className='styled'
+                    ref={this.githubRef}
+                    href='https://github.com/christophsaile'
+                  >
+                    Github
+                  </a>
+                </li>
+              </ul>
             </div>
             <div className='about__contact'>
               <h3>contact</h3>
-              <a ref={this.numberRef} href='tel:+4915782278711'>
+              <a className='styled' ref={this.numberRef} href='tel:+4915782278711'>
                 +49 1578 2278711
               </a>
             </div>

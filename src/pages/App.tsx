@@ -63,7 +63,7 @@ class App extends React.Component<Props, State> {
             window.scrollTo(0, 0);
           }}
           to='/'
-          className='logo'
+          className='logo upper styled'
         >
           chris
         </Link>

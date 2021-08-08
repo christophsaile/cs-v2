@@ -24,8 +24,8 @@ class WorkItem extends React.Component<Props> {
         </div>
         {this.props.children}
         <div className='workItem__explore'>
-          <a target='_blank' rel='noreferrer' href={this.props.link}>
-            explore
+          <a className='upper explore styled' href={this.props.link} rel='noreferrer'>
+            <span>explore</span>
           </a>
         </div>
       </article>
