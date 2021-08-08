@@ -12,6 +12,7 @@ type Content = {
 
 type Props = {
   data: Content[];
+  isMobile: boolean;
 };
 
 class Timeline extends React.Component<Props> {
@@ -27,6 +28,7 @@ class Timeline extends React.Component<Props> {
               year={_item.year}
               title={_item.title}
               info={_item.info}
+              isMobile={this.props.isMobile}
             />
           ))}
         </div>

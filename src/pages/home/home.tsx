@@ -8,6 +8,7 @@ import Timeline from '../../components/timeline/timeline';
 import About from '../../components/aboutme/aboutme';
 import Work from '../../components/work/work';
 import Background from '../../components/background/background';
+import { setScroll } from '../../helpers/setScroll';
 
 // Content
 import TimelineContent from '../../components/timeline/timeline-data.json';
@@ -49,17 +50,11 @@ class Home extends React.Component<Props> {
       for (const key of Object.keys(obj.currentElements)) {
         if (obj.currentElements[key].el.classList.contains('animationItem')) {
           let progress = obj.currentElements[key].progress;
-          const saturateVal =
-            progress < 0.3
-              ? clamp(map(progress, 0, 0.3, 0, 1), 0.3, 1)
-              : clamp(map(progress, 0.7, 1, 1, 0), 0.3, 1);
-          const brightnessVal =
-            progress < 0.3
-              ? clamp(map(progress, 0, 0.3, 0, 1), 0.3, 1)
-              : clamp(map(progress, 0.7, 1, 1, 0), 0.3, 1);
-          obj.currentElements[
-            key
-          ].el.style.filter = `saturate(${saturateVal}) brightness(${brightnessVal})`;
+          const opacityVal =
+            progress < 0.4
+              ? clamp(map(progress, 0, 0.4, 0, 1), 0.4, 1)
+              : clamp(map(progress, 0.6, 1, 1, 0), 0.4, 1);
+          obj.currentElements[key].el.style.filter = `opacity(${opacityVal})`;
         }
       }
     });
@@ -78,7 +73,7 @@ class Home extends React.Component<Props> {
           <section className='content'>
             <section className='page intro'>
               <Statement intro={true}>
-                <span>
+                <span {...setScroll(true, 1)}>
                   hi, i am chris, a web-developer from germany. i am happy to see you here.
                 </span>
               </Statement>
@@ -97,11 +92,13 @@ class Home extends React.Component<Props> {
               <About />
             </section>
             <section className='page'>
-              <Timeline data={TimelineContent} />
+              <Timeline data={TimelineContent} isMobile={this.props.isMobile} />
             </section>
             <section className='page'>
               <Statement>
-                <span>check out some of the projects i did in the past</span>
+                <span {...setScroll(true, 1)}>
+                  check out some of the projects i did in the past
+                </span>
               </Statement>
               <Background
                 id='creation'
@@ -119,7 +116,9 @@ class Home extends React.Component<Props> {
             </section>
             <section className='page'>
               <Statement>
-                <span>thanks for your interest in me, have a nice day.</span>
+                <span {...setScroll(true, 1)}>
+                  thanks for your interest in me, have a nice day.
+                </span>
               </Statement>
               <Background
                 id='end'

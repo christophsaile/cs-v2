@@ -21,6 +21,7 @@
     @include breakpoint($md) {
       padding: 0;
       flex-direction: row;
+      height: 70vh;
     }
   }
 
@@ -36,7 +37,12 @@
     z-index: -1;
 
     @include breakpoint($md) {
+      width: calc(100% + 8rem);
       height: 0.4rem;
+      left: -4rem;
+      right: -4rem;
+      top: 0;
+      bottom: 0;
     }
   }
 }
