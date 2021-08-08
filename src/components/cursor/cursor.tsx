@@ -26,7 +26,7 @@ class Cursor extends React.Component<Props> {
       });
       GSAP.to(this.smallCursorRef.current, {
         x: e.x - 5,
-        y: e.y - 7,
+        y: e.y - 5,
         duration: 0.1,
       });
     });

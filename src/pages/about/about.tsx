@@ -42,8 +42,9 @@ class Aboutme extends React.Component<Props> {
     return (
       <main className='about page' data-scroll-container data-scroll-section>
         <section className='about__content'>
-          <Link to='/' className='about__cancel'>
+          <Link to='/' className='about__cancel styled'>
             <Cancel title='Cancel' />
+            <span></span>
           </Link>
           <div className='about__smiley'>
             <a href='mailto:christoph.saile@googlemail.com'>
