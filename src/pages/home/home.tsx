@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { createRef, RefObject } from 'react';
 import { map, clamp } from '../../helpers/utils';
 import LocomotiveScroll from 'locomotive-scroll';
+import { Link } from 'react-router-dom';
+import { addAnimation } from '../../helpers/addAnimation';
 
 // Components
 import Statement from '../../components/statement/statement';
@@ -21,12 +23,24 @@ type Props = {
   isMobile: boolean;
 };
 class Home extends React.Component<Props> {
+  private logoRef: RefObject<HTMLAnchorElement>;
+  private lscroll: any;
+
+  constructor(props: Props) {
+    super(props);
+    this.logoRef = createRef();
+  }
   componentDidMount() {
     this.initLscroll();
+    this.initAnimation();
   }
 
+  private initAnimation = (): void => {
+    if (this.logoRef.current) addAnimation(this.logoRef.current, 'fadeInLeft', true, '12');
+  };
+
   private initLscroll = (): void => {
-    const lscroll = new LocomotiveScroll({
+    this.lscroll = new LocomotiveScroll({
       el: document.querySelector('[data-scroll-container]'),
       smooth: true,
       direction: 'horizontal',
@@ -42,11 +56,11 @@ class Home extends React.Component<Props> {
       },
     });
 
-    if (!this.props.isMobile) this.animateItems(lscroll);
+    if (!this.props.isMobile) this.animateItems();
   };
 
-  private animateItems = (_lscroll: any) => {
-    _lscroll.on('scroll', (obj: any) => {
+  private animateItems = () => {
+    this.lscroll.on('scroll', (obj: any) => {
       for (const key of Object.keys(obj.currentElements)) {
         if (obj.currentElements[key].el.classList.contains('animationItem')) {
           let progress = obj.currentElements[key].progress;
@@ -59,13 +73,23 @@ class Home extends React.Component<Props> {
       }
     });
 
-    _lscroll.update();
+    this.lscroll.update();
   };
 
   render() {
     return (
       <>
         <div className='fixed'>
+          <Link
+            ref={this.logoRef}
+            onClick={() => {
+              this.lscroll.scrollTo(0, 0);
+            }}
+            to='/'
+            className='logo upper styled'
+          >
+            chris
+          </Link>
           <SayHey />
           {this.props.isMobile && <div className='gradient' />}
         </div>
