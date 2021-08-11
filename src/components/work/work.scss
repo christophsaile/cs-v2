@@ -9,12 +9,17 @@
   }
 
   &__content {
-    display: flex;
-    flex-direction: column;
-    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
 
     @include breakpoint($md) {
-      flex-direction: row;
+      height: 70vh;
+      margin: auto;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-auto-flow: column;
+      gap: $spacing-md 10vw;
     }
   }
 }

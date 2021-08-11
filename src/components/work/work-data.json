@@ -1,23 +1,37 @@
 [
   {
     "id": 1,
-    "title": "newsblog",
+    "title": "aeom.io",
     "meta": ["ReactNative", "Contentful"],
     "link": "https://expo.io",
-    "description": "react native - contentful technik newblog"
+    "description": "a technology newsblog created to test and evaluate how react native and contentful can be combined."
   },
   {
     "id": 2,
-    "title": "l&s - cigarettes",
-    "meta": ["Biotope", "Webdesign"],
-    "link": "https://ls-cigarettes.netlify.app/",
-    "description": "L&S - Cigaretts is an University project I did for the lecture Responsive Webdesign.<br/>The Goal was to create a Landingpage for a product of your choice and show it in an opposite context."
+    "title": "lucid dreams",
+    "meta": ["Photoshop", "Composition", "Photography"],
+    "link": "https://expo.io",
+    "description": "a composition that is intended to represent a woman who is exploring her world of dreams."
   },
   {
     "id": 3,
-    "title": "digital media intranet redesign",
-    "meta": ["Prototyping", "Figma"],
+    "title": "l&s - cigarettes",
+    "meta": ["Biotope", "WebComponents", "Webdesign"],
+    "link": "https://ls-cigarettes.netlify.app/",
+    "description": "a website for a fictitious company with the intention of illustrating an object in an opposite context. In this case healthy cigarettes."
+  },
+  {
+    "id": 4,
+    "title": "intranet ui",
+    "meta": ["Prototyping", "Figma", "UI"],
     "link": "https://www.figma.com/proto/8fxQBeadq3NuhbZb1ARgSC/gui-high-fid?node-id=0%3A2&scaling=scale-down",
-    "description": "As a part of an University project I had the challenge to create aninteractive prototype for the faculty of Digital Media."
+    "description": "a prototypical redesign of the user interface for the university intranet site."
+  },
+  {
+    "id": 5,
+    "title": "a bulli on tour",
+    "meta": ["blender", "lowpoly"],
+    "link": "https://www.figma.com/proto/8fxQBeadq3NuhbZb1ARgSC/gui-high-fid?node-id=0%3A2&scaling=scale-down",
+    "description": "a 3d animation of a bulli bus driving through an enchanted forest at night."
   }
 ]

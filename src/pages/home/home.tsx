@@ -5,7 +5,7 @@ import LocomotiveScroll from 'locomotive-scroll';
 // Components
 import Statement from '../../components/statement/statement';
 import Timeline from '../../components/timeline/timeline';
-import About from '../../components/aboutme/aboutme';
+import Aboutme from '../../components/aboutme/aboutme';
 import Work from '../../components/work/work';
 import Background from '../../components/background/background';
 import { setScroll } from '../../helpers/setScroll';
@@ -74,7 +74,7 @@ class Home extends React.Component<Props> {
             <section className='page intro'>
               <Statement intro={true}>
                 <span {...setScroll(true, 1)}>
-                  hi, i am chris, a web-developer from germany. i am happy to see you here.
+                  hey, i am chris, a web developer from germany. i am excited to see you here.
                 </span>
               </Statement>
               <Background
@@ -89,7 +89,7 @@ class Home extends React.Component<Props> {
               />
             </section>
             <section className='page'>
-              <About />
+              <Aboutme />
             </section>
             <section className='page'>
               <Timeline data={TimelineContent} isMobile={this.props.isMobile} />

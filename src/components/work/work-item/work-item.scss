@@ -12,8 +12,7 @@
   }
 
   @include breakpoint($md) {
-    width: 40rem;
-    margin-right: 10vw;
+    width: 45rem;
     margin-bottom: 0;
 
     &:last-child {
@@ -21,25 +20,27 @@
     }
   }
 
-  &.is-inview {
-    > * {
-      opacity: 1;
-    }
+  @include breakpoint($max-md) {
+    &.is-inview {
+      > * {
+        opacity: 1;
+      }
 
-    :first-child {
-      transition-delay: 0.1s;
-    }
+      :first-child {
+        transition-delay: 0.1s;
+      }
 
-    :nth-child(2) {
-      transition-delay: 0.2s;
-    }
+      :nth-child(2) {
+        transition-delay: 0.2s;
+      }
 
-    :nth-child(3) {
-      transition-delay: 0.3s;
-    }
+      :nth-child(3) {
+        transition-delay: 0.3s;
+      }
 
-    :nth-child(4) {
-      transition-delay: 0.4s;
+      :nth-child(4) {
+        transition-delay: 0.4s;
+      }
     }
   }
 
@@ -56,5 +57,9 @@
 
   &__explore {
     margin-top: $spacing-xs;
+
+    a {
+      font-size: $font-xs;
+    }
   }
 }
