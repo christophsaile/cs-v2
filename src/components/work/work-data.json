@@ -5,7 +5,7 @@
     "slug": "aeom",
     "meta": ["ReactNative", "Contentful"],
     "description": "a technology newsblog created to test and evaluate how react native and contentful can be combined.",
-    "imgs": ["/images/logo512.png", "/images/logo512.png"]
+    "imgs": ["/images/aeom-1.jpg", "/images/aeom-2.jpg", "/images/aeom-3.jpg", "/images/aeom-4.jpg"]
   },
   {
     "id": 2,

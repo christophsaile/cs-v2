@@ -3,6 +3,7 @@ $swiper-height: 65vh;
 .gallery {
   &__img {
     height: $swiper-height;
+    border-radius: 1.7rem;
   }
 }
 
@@ -17,9 +18,9 @@ $swiper-height: 65vh;
   }
 
   .swiper-slide img {
-    display: block;
-    width: 100%;
+    display: inline-block;
     height: 100%;
     object-fit: cover;
+    border-radius: 1.7rem;
   }
 }
