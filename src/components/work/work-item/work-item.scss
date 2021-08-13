@@ -56,10 +56,11 @@
   }
 
   &__explore {
-    margin-top: $spacing-xs;
-
     a {
+      display: inline-block;
+      padding-top: 1.8rem;
       font-size: $font-xs;
+      line-height: 2;
     }
   }
 }
