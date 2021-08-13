@@ -24,7 +24,10 @@ class WorkItem extends React.Component<Props> {
         <div className='workItem__explore'>
           <Link
             className='upper arrow styled'
-            to={{ pathname: '/explore/' + this.props.slug, state: { imgs: this.props.imgs } }}
+            to={{
+              pathname: '/explore/' + this.props.slug,
+              state: { title: this.props.title, imgs: this.props.imgs },
+            }}
           >
             <span>explore</span>
           </Link>

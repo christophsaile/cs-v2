@@ -13,12 +13,7 @@
     "slug": "lucid-dreams",
     "meta": ["Photoshop", "Composition", "Photography"],
     "description": "a composition that is intended to represent a woman who is exploring her world of dreams.",
-    "imgs": [
-      "/images/lucid-dreams.jpg",
-      "/images/logo512.png",
-      "/images/lucid-dreams.jpg",
-      "/images/logo512.png"
-    ]
+    "imgs": ["/images/lucid-dreams.jpg"]
   },
   {
     "id": 3,

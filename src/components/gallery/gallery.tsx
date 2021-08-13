@@ -1,45 +1,78 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper.scss';
+import 'swiper/components/navigation/navigation.scss';
+
+import SwiperCore, { Navigation } from 'swiper/core';
+
+SwiperCore.use([Navigation]);
 
 type Props = {
-  data: string[];
+  imgs: string[];
+  isMobile: boolean;
 };
 
 class Gallery extends React.Component<Props> {
-  componentDidMount() {}
+  private checkImages = (): number => {
+    return this.props.imgs.length;
+  };
 
-  // private initSwiper =() => {
-  //   this.swiper = new Swiper(".swiper-container", {
-  //     loop: true,
-  //     slidesPerView: "auto",
-  //     spaceBetween: 40,
-  //     centeredSlides: true,
-  //     navigation: {
-  //       nextEl: ".swiper-button-next",
-  //       prevEl: ".swiper-button-prev"
-  //     }
-  //   });
-  // }
+  private renderGallery = (): JSX.Element => {
+    let renderItem: JSX.Element;
+    if (this.checkImages() === 1) {
+      renderItem = this.settingsOneItem();
+    } else if (this.checkImages() < 1 && this.checkImages() <= 3) {
+      renderItem = this.settingsTwoItems();
+    } else {
+      renderItem = this.settingsMoreThanThreeItems();
+    }
+    return renderItem;
+  };
 
-  render() {
+  private settingsOneItem = (): JSX.Element => {
+    return <img className='gallery__img' src={this.props.imgs[0]} alt='' />;
+  };
+
+  private settingsTwoItems = (): JSX.Element => {
     return (
       <Swiper
+        navigation
         spaceBetween={40}
-        slidesPerView={3}
+        slidesPerView={1}
         loop
         centeredSlides
         className='mySwiper'
-        onSlideChange={() => console.log('slide change')}
-        onSwiper={(swiper) => console.log(swiper)}
       >
-        {this.props.data.map((_item: string, _index: number) => (
-          <SwiperSlide key={_index}>
-            <img src={_item} alt='' />
-          </SwiperSlide>
-        ))}
+        {this.renderSlides()}
       </Swiper>
     );
+  };
+
+  private settingsMoreThanThreeItems = (): JSX.Element => {
+    return (
+      <Swiper
+        navigation
+        spaceBetween={40}
+        slidesPerView={this.props.isMobile ? 1 : 3}
+        loop
+        centeredSlides
+        className='mySwiper'
+      >
+        {this.renderSlides()}
+      </Swiper>
+    );
+  };
+
+  private renderSlides = (): JSX.Element[] => {
+    return this.props.imgs.map((_item: string, _index: number) => (
+      <SwiperSlide key={_index}>
+        <img src={_item} alt='' />
+      </SwiperSlide>
+    ));
+  };
+
+  render() {
+    return <>{this.renderGallery()}</>;
   }
 }
 
