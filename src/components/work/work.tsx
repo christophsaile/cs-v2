@@ -6,9 +6,10 @@ import WorkItem from './work-item/work-item';
 type Content = {
   id: number;
   title: string;
+  slug: string;
   meta: string[];
-  link: string;
   description: string;
+  imgs: string[];
 };
 
 type Props = {
@@ -30,7 +31,8 @@ class Work extends React.Component<Props> {
               id={_item.id}
               title={_item.title}
               meta={_item.meta}
-              link={_item.link}
+              slug={_item.slug}
+              imgs={_item.imgs}
             >
               <p dangerouslySetInnerHTML={this.createMarkup(_item.description)} />
             </WorkItem>

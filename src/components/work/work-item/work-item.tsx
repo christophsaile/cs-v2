@@ -1,11 +1,13 @@
 import React from 'react';
 import { setScroll } from '../../../helpers/setScroll';
+import { Link } from 'react-router-dom';
 
 type Props = {
   id: number;
   title: string;
-  link: string;
+  slug: string;
   meta: string[];
+  imgs: string[];
 };
 
 class WorkItem extends React.Component<Props> {
@@ -20,9 +22,12 @@ class WorkItem extends React.Component<Props> {
         </div>
         {this.props.children}
         <div className='workItem__explore'>
-          <a className='upper explore styled' href={this.props.link} rel='noreferrer'>
+          <Link
+            className='upper arrow styled'
+            to={{ pathname: '/explore/' + this.props.slug, state: { imgs: this.props.imgs } }}
+          >
             <span>explore</span>
-          </a>
+          </Link>
         </div>
       </article>
     );

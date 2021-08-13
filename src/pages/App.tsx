@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Cursor from '../components/cursor/cursor';
 const Home = React.lazy(() => import('./home/home'));
 const About = React.lazy(() => import('./about/about'));
+const Explore = React.lazy(() => import('./explore/explore'));
 
 type Props = {};
 type State = {
@@ -51,6 +52,10 @@ class App extends React.Component<Props, State> {
           <Switch>
             <Route exact path='/' render={() => <Home isMobile={this.state.isMobile} />} />
             <Route path='/about' render={() => <About isMobile={this.state.isMobile} />} />
+            <Route
+              path='/explore/:slug'
+              render={() => <Explore isMobile={this.state.isMobile} />}
+            />
           </Switch>
         </Suspense>
         {!isMobile && <Cursor />}

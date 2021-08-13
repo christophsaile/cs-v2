@@ -33,7 +33,7 @@ class Aboutme extends React.Component<Props> {
                 hesitate to get in touch with me.
               </p>
               <p>
-                <Link to='/about' className='styled upper explore'>
+                <Link to='/about' className='styled upper arrow'>
                   contact me
                 </Link>
               </p>

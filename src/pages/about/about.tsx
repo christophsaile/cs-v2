@@ -13,7 +13,7 @@ type Props = {
   isMobile: boolean;
 };
 
-class Aboutme extends React.Component<Props> {
+class About extends React.Component<Props> {
   private facebookRef: RefObject<HTMLAnchorElement>;
   private instagramRef: RefObject<HTMLAnchorElement>;
   private githubRef: RefObject<HTMLAnchorElement>;
@@ -106,4 +106,4 @@ class Aboutme extends React.Component<Props> {
     );
   }
 }
-export default Aboutme;
+export default About;
