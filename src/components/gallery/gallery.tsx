@@ -52,10 +52,9 @@ class Gallery extends React.Component<Props> {
     return (
       <Swiper
         navigation
-        spaceBetween={40}
-        slidesPerView={this.props.isMobile ? 1 : 3}
+        spaceBetween={50}
+        slidesPerView={this.props.isMobile ? 1 : 'auto'}
         loop
-        centeredSlides
         className='mySwiper'
       >
         {this.renderSlides()}

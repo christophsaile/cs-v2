@@ -24,8 +24,8 @@ const Explore = (props: Props) => {
       </Link>
       <div className='explore__slider'>
         <Gallery isMobile={props.isMobile} imgs={imgs} />
-        <h2 className='explore__title'>{title}</h2>
       </div>
+      <h2 className='explore__title'>{title}</h2>
     </section>
   );
 };

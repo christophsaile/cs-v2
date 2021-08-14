@@ -21,7 +21,16 @@
     "slug": "ls-cigarettes",
     "meta": ["Biotope", "WebComponents", "Webdesign"],
     "description": "a website for a fictitious company with the intention of illustrating an object in an opposite context. In this case healthy cigarettes.",
-    "imgs": ["/images/logo512.png"]
+    "imgs": [
+      "/images/ls-1.jpg",
+      "/images/ls-2.jpg",
+      "/images/ls-3.jpg",
+      "/images/ls-4.jpg",
+      "/images/ls-5.jpg",
+      "/images/ls-6.jpg",
+      "/images/ls-7.jpg",
+      "/images/ls-8.jpg"
+    ]
   },
   {
     "id": 4,
