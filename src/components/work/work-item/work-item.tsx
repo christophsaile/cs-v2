@@ -8,6 +8,7 @@ type Props = {
   slug: string;
   meta: string[];
   imgs: string[];
+  imgsM: boolean;
 };
 
 class WorkItem extends React.Component<Props> {
@@ -26,7 +27,7 @@ class WorkItem extends React.Component<Props> {
             className='upper arrow styled'
             to={{
               pathname: '/explore/' + this.props.slug,
-              state: { title: this.props.title, imgs: this.props.imgs },
+              state: { title: this.props.title, imgs: this.props.imgs, imgsM: this.props.imgsM },
             }}
           >
             <span>explore</span>

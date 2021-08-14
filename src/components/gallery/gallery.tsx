@@ -9,12 +9,17 @@ SwiperCore.use([Navigation]);
 
 type Props = {
   imgs: string[];
+  imgsM: boolean;
   isMobile: boolean;
 };
 
 class Gallery extends React.Component<Props> {
   private checkImages = (): number => {
     return this.props.imgs.length;
+  };
+
+  private mobileString = (_path: string) => {
+    return _path.slice(0, 8) + 'm-' + _path.slice(8);
   };
 
   private renderGallery = (): JSX.Element => {
@@ -65,7 +70,14 @@ class Gallery extends React.Component<Props> {
   private renderSlides = (): JSX.Element[] => {
     return this.props.imgs.map((_item: string, _index: number) => (
       <SwiperSlide key={_index}>
-        <img src={_item} alt='' />
+        {this.props.imgsM ? (
+          <picture>
+            <source srcSet={_item} media='(min-width: 768px)' />
+            <img src={this.mobileString(_item)} alt='' />
+          </picture>
+        ) : (
+          <img src={_item} alt='' />
+        )}
       </SwiperSlide>
     ));
   };

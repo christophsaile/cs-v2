@@ -2,8 +2,12 @@ $swiper-height: 65vh;
 
 .gallery {
   &__img {
-    height: $swiper-height;
+    max-width: 100%;
     border-radius: 1.7rem;
+
+    @include breakpoint($md) {
+      height: $swiper-height;
+    }
   }
 }
 

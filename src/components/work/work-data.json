@@ -5,7 +5,13 @@
     "slug": "aeom",
     "meta": ["ReactNative", "Contentful"],
     "description": "a technology newsblog created to test and evaluate how react native and contentful can be combined.",
-    "imgs": ["/images/aeom-1.jpg", "/images/aeom-2.jpg", "/images/aeom-3.jpg", "/images/aeom-4.jpg"]
+    "imgs": [
+      "/images/aeom-1.jpg",
+      "/images/aeom-2.jpg",
+      "/images/aeom-3.jpg",
+      "/images/aeom-4.jpg"
+    ],
+    "imgsM": false
   },
   {
     "id": 2,
@@ -13,7 +19,8 @@
     "slug": "lucid-dreams",
     "meta": ["Photoshop", "Composition", "Photography"],
     "description": "a composition that is intended to represent a woman who is exploring her world of dreams.",
-    "imgs": ["/images/lucid-dreams.jpg"]
+    "imgs": ["/images/lucid-dreams.jpg"],
+    "imgsM": false
   },
   {
     "id": 3,
@@ -30,7 +37,8 @@
       "/images/ls-6.jpg",
       "/images/ls-7.jpg",
       "/images/ls-8.jpg"
-    ]
+    ],
+    "imgsM": true
   },
   {
     "id": 4,
@@ -38,7 +46,8 @@
     "slug": "intranet-ui",
     "meta": ["Prototyping", "Figma", "UI"],
     "description": "a prototypical redesign of the user interface for the university intranet site.",
-    "imgs": ["/images/logo512.png"]
+    "imgs": ["/images/logo512.png"],
+    "imgsM": false
   },
   {
     "id": 5,
@@ -46,6 +55,7 @@
     "slug": "a-bulli-on-tour",
     "meta": ["blender", "lowpoly"],
     "description": "a 3d animation of a bulli bus driving through an enchanted forest at night.",
-    "imgs": ["/images/logo512.png"]
+    "imgs": ["/images/logo512.png"],
+    "imgsM": false
   }
 ]

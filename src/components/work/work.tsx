@@ -10,6 +10,7 @@ type Content = {
   meta: string[];
   description: string;
   imgs: string[];
+  imgsM: boolean;
 };
 
 type Props = {
@@ -33,6 +34,7 @@ class Work extends React.Component<Props> {
               meta={_item.meta}
               slug={_item.slug}
               imgs={_item.imgs}
+              imgsM={_item.imgsM}
             >
               <p dangerouslySetInnerHTML={this.createMarkup(_item.description)} />
             </WorkItem>

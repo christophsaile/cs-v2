@@ -1,9 +1,13 @@
 .explore {
   display: flex;
   flex-direction: column;
-  padding: $spacing-md 0 $spacing-sm 0;
+  padding: $spacing-sm;
   width: 100%;
   height: 100vh;
+
+  @include breakpoint($md) {
+    padding: $spacing-md 0 $spacing-sm 0;
+  }
 
   &__cancel {
     position: fixed !important;
