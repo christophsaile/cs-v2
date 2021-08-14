@@ -24,13 +24,9 @@ class Gallery extends React.Component<Props> {
 
   private renderGallery = (): JSX.Element => {
     let renderItem: JSX.Element;
-    if (this.checkImages() === 1) {
-      renderItem = this.settingsOneItem();
-    } else if (this.checkImages() < 1 && this.checkImages() <= 3) {
-      renderItem = this.settingsTwoItems();
-    } else {
-      renderItem = this.settingsMoreThanThreeItems();
-    }
+    this.checkImages() === 1
+      ? (renderItem = this.settingsOneItem())
+      : (renderItem = this.settingsMoreThanOneItem());
     return renderItem;
   };
 
@@ -38,28 +34,14 @@ class Gallery extends React.Component<Props> {
     return <img className='gallery__img' src={this.props.imgs[0]} alt='' />;
   };
 
-  private settingsTwoItems = (): JSX.Element => {
-    return (
-      <Swiper
-        navigation
-        spaceBetween={40}
-        slidesPerView={1}
-        loop
-        centeredSlides
-        className='mySwiper'
-      >
-        {this.renderSlides()}
-      </Swiper>
-    );
-  };
-
-  private settingsMoreThanThreeItems = (): JSX.Element => {
+  private settingsMoreThanOneItem = (): JSX.Element => {
     return (
       <Swiper
         navigation
         spaceBetween={50}
-        slidesPerView={this.props.isMobile ? 1 : 'auto'}
+        slidesPerView={1}
         loop
+        centeredSlides
         className='mySwiper'
       >
         {this.renderSlides()}
