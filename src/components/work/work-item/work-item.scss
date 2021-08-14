@@ -2,7 +2,10 @@
   position: relative;
   width: 100%;
   margin-bottom: $spacing-lg;
+  padding: $spacing-xs;
+  border-radius: 1rem;
   box-shadow: $boxshadow;
+  background-color: $darkgrey;
 
   @include breakpoint($max-md) {
     > * {
@@ -14,6 +17,7 @@
   @include breakpoint($md) {
     width: 45rem;
     margin-bottom: 0;
+    padding: $spacing-sm;
 
     &:last-child {
       margin-right: 0;

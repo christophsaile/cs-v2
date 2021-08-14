@@ -21,6 +21,10 @@
     @include breakpoint($md) {
       padding: 0;
       flex-direction: row;
+      height: 80vh;
+    }
+
+    @include breakpoint($xxl) {
       height: 70vh;
     }
   }

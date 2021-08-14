@@ -5,9 +5,13 @@
   position: relative;
   margin-bottom: $spacing-md;
   padding: $spacing-sm $spacing-xs;
-  background-color: $darkgrey;
-  box-shadow: $boxshadow;
   border-radius: 1rem;
+  box-shadow: $boxshadow;
+  background-color: $darkgrey;
+  transition: 0.6s $transition;
+
+  &:hover {
+  }
 
   @include breakpoint($md) {
     align-self: flex-start;
