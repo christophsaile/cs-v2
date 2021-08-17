@@ -62,7 +62,13 @@
     "slug": "a-bulli-on-tour",
     "meta": ["blender", "lowpoly"],
     "description": "a 3d animation of a bulli bus driving through an enchanted forest at night.",
-    "imgs": ["/images/logo512.png"],
+    "imgs": [
+      "/images/bulli-1.jpg",
+      "/images/bulli-2.jpg",
+      "/images/bulli-3.jpg",
+      "/images/bulli-4.jpg",
+      "/images/bulli-5.jpg"
+    ],
     "imgsM": false
   }
 ]
