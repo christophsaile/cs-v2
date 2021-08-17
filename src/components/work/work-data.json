@@ -46,7 +46,14 @@
     "slug": "intranet-ui",
     "meta": ["Prototyping", "Figma", "UI"],
     "description": "a prototypical redesign of the user interface for the university intranet site.",
-    "imgs": ["/images/logo512.png"],
+    "imgs": [
+      "/images/gui-1.jpg",
+      "/images/gui-2.jpg",
+      "/images/gui-3.jpg",
+      "/images/gui-4.jpg",
+      "/images/gui-5.jpg",
+      "/images/gui-6.jpg"
+    ],
     "imgsM": false
   },
   {
