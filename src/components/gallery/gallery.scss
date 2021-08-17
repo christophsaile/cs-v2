@@ -23,7 +23,27 @@ $swiper-height: 65vh;
   .swiper-slide img {
     display: inline-block;
     height: 100%;
+    max-width: 100%;
     object-fit: cover;
     border-radius: 1.7rem;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: $lightgrey;
+    transition: 0.6s $transition;
+
+    &:hover {
+      color: $white;
+    }
+  }
+
+  @include breakpoint($md) {
+    .swiper-button-next {
+      right: $spacing-md;
+    }
+    .swiper-button-prev {
+      left: $spacing-md;
+    }
   }
 }

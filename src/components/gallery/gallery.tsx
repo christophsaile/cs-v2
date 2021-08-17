@@ -36,14 +36,7 @@ class Gallery extends React.Component<Props> {
 
   private settingsMoreThanOneItem = (): JSX.Element => {
     return (
-      <Swiper
-        navigation
-        spaceBetween={50}
-        slidesPerView={1}
-        loop
-        centeredSlides
-        className='mySwiper'
-      >
+      <Swiper navigation slidesPerView={1} loop centeredSlides className='mySwiper'>
         {this.renderSlides()}
       </Swiper>
     );
