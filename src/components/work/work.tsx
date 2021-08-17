@@ -9,6 +9,7 @@ type Content = {
   slug: string;
   meta: string[];
   description: string;
+  link?: string;
   imgs: string[];
   imgsM: boolean;
 };
@@ -33,6 +34,7 @@ class Work extends React.Component<Props> {
               title={_item.title}
               meta={_item.meta}
               slug={_item.slug}
+              link={_item.link}
               imgs={_item.imgs}
               imgsM={_item.imgsM}
             >

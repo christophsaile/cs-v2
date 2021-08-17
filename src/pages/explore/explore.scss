@@ -33,6 +33,21 @@
     text-align: center;
   }
 
+  &__link {
+    h2::after {
+      padding-left: 0.5rem;
+      content: '\203A';
+      color: $lightgrey;
+      transition: 0.6s $transition;
+    }
+
+    &:hover {
+      h2::after {
+        color: $bluegrey;
+      }
+    }
+  }
+
   &__title {
     display: block;
     width: 100%;

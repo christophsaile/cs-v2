@@ -13,8 +13,8 @@ type Props = {
 };
 
 const Explore = (props: Props) => {
-  const location = useLocation<{ title: string; imgs: string[]; imgsM: boolean }>();
-  const { imgs, title, imgsM } = location.state;
+  const location = useLocation<{ title: string; imgs: string[]; imgsM: boolean; link: string }>();
+  const { imgs, title, imgsM, link } = location.state;
 
   return (
     <section className='explore page'>
@@ -25,7 +25,13 @@ const Explore = (props: Props) => {
       <div className='explore__slider'>
         <Gallery isMobile={props.isMobile} imgs={imgs} imgsM={imgsM} />
       </div>
-      <h2 className='explore__title'>{title}</h2>
+      {link ? (
+        <a className='explore__link' href={link} target='_blank' rel='noreferrer'>
+          <h2 className='explore__title'>{title}</h2>
+        </a>
+      ) : (
+        <h2 className='explore__title'>{title}</h2>
+      )}
     </section>
   );
 };

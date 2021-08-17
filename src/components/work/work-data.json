@@ -28,6 +28,7 @@
     "slug": "ls-cigarettes",
     "meta": ["Biotope", "WebComponents"],
     "description": "a website for a fictitious company with the intention of illustrating an object in an opposite context. In this case healthy cigarettes.",
+    "link": "https://ls-cigarettes.netlify.app/",
     "imgs": [
       "/images/ls-1.jpg",
       "/images/ls-2.jpg",
@@ -62,6 +63,7 @@
     "slug": "a-bulli-on-tour",
     "meta": ["blender", "lowpoly"],
     "description": "a 3d animation of a bulli bus driving through an enchanted forest at night.",
+    "link": "https://www.youtube.com/watch?v=bR6W0saSq5o",
     "imgs": [
       "/images/bulli-1.jpg",
       "/images/bulli-2.jpg",

@@ -7,6 +7,7 @@ type Props = {
   title: string;
   slug: string;
   meta: string[];
+  link?: string;
   imgs: string[];
   imgsM: boolean;
 };
@@ -27,7 +28,12 @@ class WorkItem extends React.Component<Props> {
             className='upper arrow styled'
             to={{
               pathname: '/explore/' + this.props.slug,
-              state: { title: this.props.title, imgs: this.props.imgs, imgsM: this.props.imgsM },
+              state: {
+                title: this.props.title,
+                imgs: this.props.imgs,
+                imgsM: this.props.imgsM,
+                link: this.props.link,
+              },
             }}
           >
             <span>explore</span>
