@@ -8,6 +8,7 @@ import Cursor from '../components/cursor/cursor';
 const Home = React.lazy(() => import('./home/home'));
 const About = React.lazy(() => import('./about/about'));
 const Explore = React.lazy(() => import('./explore/explore'));
+const NoMatch = React.lazy(() => import('./no-match/no-match'));
 
 type Props = {};
 type State = {
@@ -56,6 +57,9 @@ class App extends React.Component<Props, State> {
               path='/explore/:slug'
               render={() => <Explore isMobile={this.state.isMobile} />}
             />
+            <Route path='*'>
+              <NoMatch />
+            </Route>
           </Switch>
         </Suspense>
         {!isMobile && <Cursor />}

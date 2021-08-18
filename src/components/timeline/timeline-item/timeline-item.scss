@@ -10,13 +10,10 @@
   background-color: $darkgrey;
   transition: 0.6s $transition;
 
-  &:hover {
-  }
-
   @include breakpoint($md) {
     align-self: flex-start;
     width: 35rem;
-    margin: 0 5vw 0 0;
+    margin: 0 $spacing-lg 0 0;
     padding: $spacing-sm;
     height: 45%;
 
