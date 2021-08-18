@@ -23,20 +23,25 @@
   }
 
   &__text {
-    &:first-child {
-      position: relative;
+    position: relative;
 
-      &::before {
-        content: '';
-        position: absolute;
-        top: -2rem;
-        height: 0.2rem;
-        width: 8rem;
-        background-color: $bluegrey;
-      }
+    &::before {
+      content: '';
+      position: absolute;
+      top: -2rem;
+      width: 8rem;
+      height: 0.2rem;
+      background-color: $darkgreen;
+      transition: 0.6s $transition;
+      opacity: 0;
     }
 
     &.is-inview {
+      &::before {
+        opacity: 1;
+        transition-delay: 0.1s;
+      }
+
       p {
         opacity: 1;
         transition-delay: 0.2s;

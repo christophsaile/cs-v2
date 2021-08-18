@@ -37,7 +37,7 @@
     width: 0.2rem;
     height: calc(100% + 2rem);
     margin: auto;
-    background-color: $bluegrey;
+    background-color: $darkgreen;
     z-index: -1;
 
     @include breakpoint($md) {

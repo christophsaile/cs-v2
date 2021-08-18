@@ -30,7 +30,7 @@
       height: 1.5rem;
       margin: auto;
       border-radius: 100%;
-      border: 0.2rem solid $bluegrey;
+      border: 0.2rem solid $darkgreen;
       background-color: $darkblue;
       transition: 0.6s $transition;
       transition-delay: 0.2s;
@@ -38,8 +38,8 @@
 
     &.is-inview {
       &::before {
-        background-color: $bluegrey;
-        box-shadow: 0 0 1.5rem 0 $bluegrey;
+        background-color: $darkgreen;
+        box-shadow: 0 0 1.5rem 0 $darkgreen;
       }
     }
 
@@ -68,7 +68,7 @@
         height: 1.5rem;
         margin: auto;
         border-radius: 100%;
-        border: 0.2rem solid $bluegrey;
+        border: 0.2rem solid $darkgreen;
         background-color: $darkblue;
         transition: 0.6s $transition;
         transition-delay: 0.2s;
@@ -76,8 +76,8 @@
 
       &.is-inview {
         &::before {
-          background-color: $bluegrey;
-          box-shadow: 0 0 1.5rem 0 $bluegrey;
+          background-color: $darkgreen;
+          box-shadow: 0 0 1.5rem 0 $darkgreen;
         }
       }
     }

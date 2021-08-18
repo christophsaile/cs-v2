@@ -10,7 +10,7 @@ html {
 }
 
 ::selection {
-  background: $bluegrey;
+  background: $darkgreen;
   color: $white;
 }
 
@@ -79,7 +79,7 @@ a {
     &::after {
       padding-left: 0.3rem;
       content: '\203A';
-      color: $bluegrey;
+      color: $darkgreen;
     }
 
     &.styled {
