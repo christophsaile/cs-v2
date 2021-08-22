@@ -20,10 +20,6 @@ class Aboutme extends React.Component<Props> {
               as a frontend developer.
             </p>
             <p>
-              besides web development, i like to design user interfaces, create meaningful
-              animations, and learn more about photography.
-            </p>
-            <p>
               if you have any questions or want to create something unique with me, do not hesitate
               to get in touch with me.
             </p>

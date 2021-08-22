@@ -3,6 +3,7 @@ import { map, clamp } from '../../helpers/utils';
 import LocomotiveScroll from 'locomotive-scroll';
 import { Link } from 'react-router-dom';
 import { addAnimation } from '../../helpers/addAnimation';
+import { setScroll } from '../../helpers/setScroll';
 
 // Components
 import Statement from '../../components/statement/statement';
@@ -10,7 +11,7 @@ import Timeline from '../../components/timeline/timeline';
 import Aboutme from '../../components/aboutme/aboutme';
 import Work from '../../components/work/work';
 import Background from '../../components/background/background';
-import { setScroll } from '../../helpers/setScroll';
+import Creations from '../../components/creations/creations';
 
 // Content
 import TimelineContent from '../../components/timeline/timeline-data.json';
@@ -119,21 +120,7 @@ class Home extends React.Component<Props> {
               <Timeline data={TimelineContent} isMobile={this.props.isMobile} />
             </section>
             <section className='page'>
-              <Statement>
-                <span {...setScroll(true, 1)}>
-                  check out some of the projects i did in the past
-                </span>
-              </Statement>
-              <Background
-                id='creation'
-                settings={{
-                  uFrequency: 1.4,
-                  uAmplitude: 1.9,
-                  uDensity: 1.3,
-                  uStrength: 1.4,
-                  uOpacity: 0.9,
-                }}
-              />
+              <Creations />
             </section>
             <section className='page'>
               <Work data={WorkContent} />
