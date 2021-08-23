@@ -16,8 +16,8 @@ class Aboutme extends React.Component<Props> {
             </p>
             <p>
               currently, i live in tübingen and study online media (bsc.) at the university of
-              furtwangen. besides my studies, i am working as a working student at an digital agency
-              as a frontend developer.
+              furtwangen. besides my studies, i am a working student at an international, digital
+              agency as frontend developer.
             </p>
             <p>
               if you have any questions or want to create something unique with me, do not hesitate
