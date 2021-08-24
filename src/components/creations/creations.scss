@@ -3,11 +3,11 @@
   flex-direction: column;
   justify-content: center;
   height: 100%;
-  padding: 20vh 0 20vh $spacing-md;
+  padding: 20vh 0 $spacing-lg $spacing-md;
 
   @include breakpoint($md) {
     width: 50rem;
-    margin: 0 15vw 0 25vw;
+    margin: 0 10vw 0 20vw;
     padding: 0 $spacing-md;
   }
 

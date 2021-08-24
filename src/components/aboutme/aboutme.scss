@@ -4,8 +4,8 @@
 
   @include breakpoint($md) {
     height: 100%;
-    margin-right: 20vw;
-    padding: 0;
+    margin-right: 15vw;
+    padding-left: 5vw;
   }
 
   &__content {

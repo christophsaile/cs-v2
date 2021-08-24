@@ -4,7 +4,7 @@ import { setScroll } from '../../helpers/setScroll';
 class Creations extends React.Component {
   render() {
     return (
-      <section className='creations' {...setScroll(true, 1)}>
+      <section className='creations' {...setScroll(true, -1, 'vertical')}>
         <h2 {...setScroll(true)}>projects</h2>
         <p>
           besides web development, i like to design user interfaces, create meaningful animations

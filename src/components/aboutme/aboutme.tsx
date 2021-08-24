@@ -7,7 +7,7 @@ type Props = {};
 class Aboutme extends React.Component<Props> {
   render() {
     return (
-      <article className='aboutme' {...setScroll(true, 1)}>
+      <article className='aboutme' {...setScroll(true, -1, 'vertical')}>
         <section className='aboutme__content'>
           <div className='aboutme__text' {...setScroll(true)}>
             <p>
