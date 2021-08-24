@@ -8,11 +8,11 @@
   @include breakpoint($md) {
     width: 50rem;
     margin: 0 15vw 0 20vw;
-    padding: 0 $spacing-md;
+    padding: 0;
   }
 
-  h2 {
-    margin-bottom: $spacing-sm;
+  h3 {
+    margin-bottom: $spacing-xs;
     padding-top: $spacing-xs;
     position: relative;
 
@@ -57,6 +57,10 @@
     @include breakpoint($max-md) {
       opacity: 0;
       transition: 0.6s $transition;
+    }
+
+    &:last-of-type {
+      padding-bottom: 0;
     }
   }
 }
