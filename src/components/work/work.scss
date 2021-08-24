@@ -16,7 +16,7 @@
       width: auto;
       height: 100%;
       margin: auto;
-      padding: $spacing-md;
+      padding: $spacing-md 0;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
       grid-auto-flow: column;
