@@ -60,6 +60,8 @@ class About extends React.Component<Props> {
                     className='styled'
                     ref={this.facebookRef}
                     href='https://www.facebook.com/Chris.Saile'
+                    target='_blank'
+                    rel='noreferrer'
                   >
                     Facebook
                   </a>
@@ -69,6 +71,8 @@ class About extends React.Component<Props> {
                     className='styled'
                     ref={this.instagramRef}
                     href='https://www.instagram.com/christophsaile/'
+                    target='_blank'
+                    rel='noreferrer'
                   >
                     Instagram
                   </a>
@@ -78,6 +82,8 @@ class About extends React.Component<Props> {
                     className='styled'
                     ref={this.githubRef}
                     href='https://github.com/christophsaile'
+                    target='_blank'
+                    rel='noreferrer'
                   >
                     Github
                   </a>
