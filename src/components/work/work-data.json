@@ -1,6 +1,16 @@
 [
   {
     "id": 1,
+    "title": "houdiniCharts",
+    "slug": "houdiniCharts",
+    "meta": ["CSSHoudini", "Charting"],
+    "description": "houdiniCharts is a charting-library that uses css-houdini",
+    "imgs": ["/images/houdinicharts-1.png", "/images/houdinicharts-2.png"],
+    "link": "https://github.com/christophsaile/houdini-charts",
+    "imgsM": false
+  },
+  {
+    "id": 2,
     "title": "aeom.io",
     "slug": "aeom",
     "meta": ["ReactNative", "Contentful"],
@@ -14,7 +24,7 @@
     "imgsM": false
   },
   {
-    "id": 2,
+    "id": 3,
     "title": "lucid dreams",
     "slug": "lucid-dreams",
     "meta": ["Photoshop", "Photography"],
@@ -23,7 +33,7 @@
     "imgsM": false
   },
   {
-    "id": 3,
+    "id": 4,
     "title": "l&s - cigarettes",
     "slug": "ls-cigarettes",
     "meta": ["Biotope", "WebComponents"],
@@ -42,7 +52,7 @@
     "imgsM": true
   },
   {
-    "id": 4,
+    "id": 5,
     "title": "intranet ui",
     "slug": "intranet-ui",
     "meta": ["Prototyping", "Figma", "UI"],
@@ -58,7 +68,7 @@
     "imgsM": false
   },
   {
-    "id": 5,
+    "id": 6,
     "title": "a bulli on tour",
     "slug": "a-bulli-on-tour",
     "meta": ["blender", "lowpoly"],
