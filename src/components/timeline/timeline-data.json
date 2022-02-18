@@ -25,14 +25,20 @@
   },
   {
     "id": 5,
-    "year": "2018 - today",
+    "year": "2018 - 2022",
     "title": "B.Sc. OnlineMedien",
     "info": "University of Furtwangen Faculty of Digital Media"
   },
   {
     "id": 6,
-    "year": "2020 - today",
+    "year": "2020 - 2022",
     "title": "Working student web development",
+    "info": "Virtual Identity AG - Freiburg"
+  },
+  {
+    "id": 7,
+    "year": "2022 - today",
+    "title": "Frontend Engineer",
     "info": "Virtual Identity AG - Freiburg"
   }
 ]
