@@ -13,7 +13,7 @@
     "title": "houdiniCharts",
     "slug": "houdiniCharts",
     "meta": ["CSSHoudini", "Charting"],
-    "description": "houdiniCharts is a charting-library that uses css-houdini",
+    "description": "houdiniCharts is a charting library that uses css houdini to create performant, interactive and accessible charts",
     "imgs": ["/images/houdinicharts-1.png", "/images/houdinicharts-2.png"],
     "link": "https://github.com/christophsaile/houdini-charts",
     "imgsM": false
