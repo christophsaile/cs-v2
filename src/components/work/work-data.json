@@ -1,10 +1,10 @@
 [
   {
     "id": 1,
-    "title": "R.Y.N.O Hoverboard",
+    "title": "r.y.n.o hoverboard",
     "slug": "ryno-hoverboard",
     "meta": ["Blender", "SubstancePainter"],
-    "description": "the R.Y.N.O hoverboard is a concept asset i created for the game ratchet&clank",
+    "description": "the r.y.n.o hoverboard is a concept asset i created for the game ratchet&clank",
     "imgs": ["/images/hoverboard-1.jpg", "/images/hoverboard-2.jpg", "/images/hoverboard-3.jpg"],
     "imgsM": false
   },
