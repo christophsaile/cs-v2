@@ -11,9 +11,8 @@ class Aboutme extends React.Component<Props> {
         <section className='aboutme__content'>
           <h3 {...setScroll(true)}>about</h3>
           <p>
-            i am based in the near of tübingen-germany and have just completed my bachelor's degree
-            (bsc.) in the field of online media at the university of furtwangen (faculty of digital
-            media).
+            i am based in tübingen-germany and have just completed my bachelor's degree (bsc.) in
+            the field of online media at the university of furtwangen (faculty of digital media).
           </p>
           <p>currently i am working as an frontend engineer for an international agency.</p>
           <p>
