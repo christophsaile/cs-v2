@@ -35,8 +35,16 @@
 
   &__link {
     h2::after {
-      padding-left: 0.5rem;
-      content: '\203A';
+      content: 'next';
+      font-family: swiper-icons;
+      font-size: 40px;
+      text-transform: none !important;
+      letter-spacing: 0;
+      text-transform: none;
+      font-variant: initial;
+      padding-left: 1.2rem;
+      line-height: 1;
+      vertical-align: middle;
       color: $lightgrey;
       transition: 0.6s $transition;
     }

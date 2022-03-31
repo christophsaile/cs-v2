@@ -1,6 +1,16 @@
 [
   {
     "id": 1,
+    "title": "käsediebe",
+    "slug": "kaesediebe",
+    "meta": ["Ionic", "React", "Contentful"],
+    "description": "käsediebe is a foodblog that is based on ionic-react and uses contentful as cms",
+    "imgs": ["/images/kaesediebe-1.jpeg", "/images/kaesediebe-2.jpeg", "/images/kaesediebe-3.jpeg", "/images/kaesediebe-4.jpeg"],
+    "link": "https://kaese-diebe.netlify.app",
+    "imgsM": false
+  },
+  {
+    "id": 2,
     "title": "r.y.n.o hoverboard",
     "slug": "ryno-hoverboard",
     "meta": ["Blender", "SubstancePainter"],
@@ -9,7 +19,7 @@
     "imgsM": false
   },
   {
-    "id": 2,
+    "id": 3,
     "title": "houdiniCharts",
     "slug": "houdiniCharts",
     "meta": ["CSSHoudini", "Charting"],
@@ -19,11 +29,11 @@
     "imgsM": false
   },
   {
-    "id": 3,
+    "id": 4,
     "title": "aeom.io",
     "slug": "aeom",
     "meta": ["ReactNative", "Contentful"],
-    "description": "a technology newsblog created to test and evaluate how react native and contentful can be combined.",
+    "description": "aoem is a technology newsblog created to test and evaluate how react native and contentful can be combined.",
     "imgs": [
       "/images/aeom-1.jpg",
       "/images/aeom-2.jpg",
@@ -33,7 +43,7 @@
     "imgsM": false
   },
   {
-    "id": 4,
+    "id": 5,
     "title": "lucid dreams",
     "slug": "lucid-dreams",
     "meta": ["Photoshop", "Photography"],
@@ -42,7 +52,7 @@
     "imgsM": false
   },
   {
-    "id": 5,
+    "id": 6,
     "title": "l&s - cigarettes",
     "slug": "ls-cigarettes",
     "meta": ["Biotope", "WebComponents"],
@@ -61,7 +71,7 @@
     "imgsM": true
   },
   {
-    "id": 6,
+    "id": 7,
     "title": "intranet ui",
     "slug": "intranet-ui",
     "meta": ["Prototyping", "Figma", "UI"],
@@ -77,7 +87,7 @@
     "imgsM": false
   },
   {
-    "id": 7,
+    "id": 8,
     "title": "a bulli on tour",
     "slug": "a-bulli-on-tour",
     "meta": ["blender", "lowpoly"],
