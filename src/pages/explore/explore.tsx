@@ -18,7 +18,7 @@ const Explore = (props: Props) => {
 
   return (
     <section className='explore page'>
-      <Link to='/' className='explore__cancel styled'>
+      <Link to='/?scroll=work' className='explore__cancel styled'>
         <Cancel title='Cancel' />
         <span></span>
       </Link>

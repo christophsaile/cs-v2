@@ -34,10 +34,19 @@ class Home extends React.Component<Props> {
   componentDidMount() {
     this.initLscroll();
     this.initAnimation();
+    this.scrollBack();
   }
 
   private initAnimation = (): void => {
     if (this.logoRef.current) addAnimation(this.logoRef.current, 'fadeInLeft', true, '12');
+  };
+
+  private scrollBack = (): void => {
+    const url = new URLSearchParams(window.location.search);
+    if (url.get('scroll') === 'work') {
+      this.lscroll.scrollTo(document.querySelector('.work'));
+      window.history.replaceState({}, document.title, window.location.pathname);
+    }
   };
 
   private initLscroll = (): void => {
